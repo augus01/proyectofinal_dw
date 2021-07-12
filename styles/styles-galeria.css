@@ -1,0 +1,441 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*Inicio header*/
+
+.head .head__menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.head .head__menu .logo {
+    height: 100px;
+}
+
+.head .head__menu .menu-btn {
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+.head .menu__nav .menu__lista {
+    font-size: 20px;
+    list-style: none;
+    list-style-type: none;
+    display: flex;
+    justify-content: end;
+}
+
+.head .menu__nav .menu__lista .menu__link {
+    color: #000000;
+    text-decoration: none;
+    font-size: 17px;
+    padding: 0.5em;
+    word-spacing: 6.5em;
+    font-family: 'Playfair Display', serif;
+}
+
+.menu__nav .menu__lista .menu__link:hover {
+    color: #fe97a4;
+    border-radius: 15px;
+    font-weight: bold;
+    padding: 0 13px 0 13px;
+}
+
+
+
+/*Fin Header*/
+
+/*Inicio Section*/
+section {
+    background: #ece8e1;
+}
+
+h1 {
+    padding: 5%;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 2px;
+    font-size: 3.8rem;
+    font-weight: 500px;
+    color: #fdb3a5;
+    text-transform: uppercase;
+
+}
+
+h3 {
+    text-align: center;
+    font-family: 'Fredoka One', cursive;
+    letter-spacing: 1px;
+}
+
+.carrusel_fotos {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.carruselGeneral {
+    margin: 3% 5%;
+}
+
+
+
+.cardFotos img {
+    height: 300px;
+
+}
+
+.ocult {
+    display: none;
+}
+
+/*FIn Section*/
+
+/*INICIO FOOTER*/
+/*FIN SECTION*/
+
+
+/*FIN SECTION*/
+
+
+.grilla_foot {
+    padding: 1% 0 1%;
+    background-image: linear-gradient(to bottom, #fccfa6, #fdb3a5, #fe97a4, #fe7ba3, #ff5fa2);
+    height: 285px;
+    width: auto;
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas:". foot1 foot2"
+                        ". info_footer foot2";
+    justify-items: center;
+    align-items: center;
+}
+
+
+#foot1 {
+    grid-area: foot1;
+    justify-items: center;
+    text-align: center;
+}
+#logoPP {
+    width: 80px;
+    height: auto;
+}
+
+.info_footer {
+    grid-area: info_footer;
+    text-align: center;
+    width: 60%;
+}
+
+.info_footer a {
+    text-decoration: none;
+    color: #5d1dbd;
+}
+
+.info_footer p {
+    color: #ffffff;
+    margin: 0;
+}
+
+.info_footer a :hover {
+    color: #000000;
+}
+.icons a{
+    color: #000000;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-between;
+    padding: 10% 0 0 0;
+    
+}
+
+.icons a:hover{
+    color: #ffffff;
+    transform: rotate(360deg);
+    transition: 0.5s;
+}
+
+.foot2{
+    grid-area: foot2;
+    border-left: 1px solid white;
+}
+.foot2 ul{
+    list-style: none;
+    
+}
+.foot2 ul li{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.foot2 ul a{
+    text-decoration: none;
+    color: white;
+    padding: 10%;
+}
+
+.foot2 ul li a:hover {
+    color: #000000;
+    border-radius: 15px;
+    font-weight: bold;
+    padding: 13px 0 13px 0;
+    transition: 0.41s;
+}
+
+
+
+
+
+/*FIN FOOTER*/
+
+@media only screen and (max-width:600px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    /*Inicio header*/
+    
+    
+    .menu__nav ul li a:hover {
+        color: #000000;
+        border-radius: 15px;
+        font-weight: bold;
+        padding: 13px 0 13px 0;
+        transition: 0.41s;
+    }
+    /*Fin Header*/
+
+    .head .head__menu .logo {
+        height: 50px;
+    }
+
+    .head .head__menu .menu-btn {
+        display: block;
+    }
+
+    .head .menu__nav ul.menu__lista {
+        height: 100%;
+        width: auto;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #ff5fa2;
+        padding: 30px;
+        opacity: .9;
+        transform: translateX(-600px);
+        transition: transform .5s ease-in-out;
+    }
+
+    .head .menu__nav ul.menu__lista.show {
+        transform: translateX(0px);
+    }
+
+    .head .menu__nav ul.menu__lista li.menu__item {
+        padding: 10px;
+    }
+
+    .head .menu__nav ul.menu__lista li.menu__item a {
+        color: #ffffff;
+    }
+    .info_footer p {
+        color: #ffffff;
+        margin: 0;
+        font-size: 13px;
+    }
+
+    /*Fin Header*/
+
+
+    /*Fin Header*/
+
+    /*Inicio Section*/
+
+    section {
+        padding-bottom: 25%;
+    }
+
+    h1 {
+        font-size: 2.9rem;
+        top: 50px;
+        text-align: center;
+    }
+
+    h3 {
+        text-align: center;
+        font-family: 'Fredoka One', cursive;
+        letter-spacing: 1px;
+        position: relative;
+        top: 90px;
+        padding: 8%;
+    }
+
+    #TN {
+        top: 35px;
+        padding: 0;
+    }
+
+    .carrusel_fotos {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+
+    }
+
+    /*  */
+    .carruselGeneral {
+        margin: 3% 0;
+        top: 90px;
+    }
+
+    .cardFotos {}
+
+    .cardFotos img {
+        height: 220px;
+    }
+
+    #foto1N,
+    #foto5N,
+    #foto6N,
+    #foto7N,
+    #foto13N,
+    #foto3Je,
+    #foto5Je,
+    #foto7Je,
+    #foto9Je,
+    #foto11Je,
+    #foto12Je,
+    #foto2Mo,
+    #foto3Mo,
+    #foto7Mo,
+    #foto9Mo,
+    #foto12Mo,
+    #foto2S,
+    #foto5S,
+    #foto6S,
+    #foto8S,
+    #foto10S,
+    #foto1Ji,
+    #foto6Ji,
+    #foto8Ji,
+    #foto10Ji,
+    #foto2Mi,
+    #foto5Mi,
+    #foto6Mi,
+    #foto13Mi,
+    #foto11Mi,
+    #foto2D,
+    #foto5D,
+    #foto6D,
+    #foto9D,
+    #foto3C,
+    #foto5C,
+    #foto13C,
+    #foto2T,
+    #foto5T,
+    #foto6T,
+    #foto9T,
+    #foto12T {
+        display: none;
+
+    }
+
+    .ocult {
+        display: none;
+    }
+
+    /*FIn Section*/
+}
+
+@media only screen and (max-width:1000px) {
+
+    .head .head__menu .logo {
+        height: 70px;
+    }
+
+    .head .menu__nav .menu__lista {
+        font-size: 30px;
+        display: flex;
+        justify-content: end;
+        width: 60px;
+    }
+
+    .head .menu__nav .menu__lista .menu__link {
+        font-size: 16px;
+        padding: 0.5em;
+        word-spacing: 6.5em;
+        font-family: 'Playfair Display', serif;
+    }
+
+    .menu__nav .menu__lista .menu__link:hover {
+        color: #fe97a4;
+        border-radius: 15px;
+        font-weight: bold;
+        padding: 0 13px 0 13px;
+    }
+    .carruselGeneral {
+        margin: 10% 1%;
+        
+    }
+
+
+    
+    #foto1N,
+    #foto5N,
+    #foto6N,
+    #foto7N,
+    #foto13N,
+    #foto3Je,
+    #foto5Je,
+    #foto7Je,
+    #foto9Je,
+    #foto11Je,
+    #foto12Je,
+    #foto2Mo,
+    #foto3Mo,
+    #foto7Mo,
+    #foto9Mo,
+    #foto12Mo,
+    #foto2S,
+    #foto5S,
+    #foto6S,
+    #foto10S,
+    #foto9S,
+    #foto1Ji,
+    #foto6Ji,
+    #foto8Ji,
+    #foto10Ji,
+    #foto2Mi,
+    #foto5Mi,
+    #foto6Mi,
+    #foto13Mi,
+    #foto11Mi,
+    #foto2D,
+    #foto5D,
+    #foto6D,
+    #foto9D,
+    #foto10D,
+    #foto3C,
+    #foto5C,
+    #foto13C,
+    #foto2T,
+    #foto5T,
+    #foto6T,
+    #foto9T,
+    #foto12T {
+        display: none;
+
+    }
+
+}

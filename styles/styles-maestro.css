@@ -1,0 +1,1042 @@
+@charset "UTF-8";
+/*-----------------INICIA NOTICIAS---------------------*/
+/*VARS COLORS*/
+/*VARS COLORS*/
+* {
+  margin: 0px;
+  padding: 0px; }
+
+/*Inicio header*/
+.head .head__menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .head .head__menu .logo {
+    height: 100px; }
+  .head .head__menu .menu-btn {
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+    display: none; }
+
+.head .menu__nav .menu__lista {
+  font-size: 20px;
+  list-style: none;
+  list-style-type: none;
+  display: flex;
+  justify-content: end; }
+  .head .menu__nav .menu__lista li :hover {
+    color: #fe97a4;
+    border-radius: 15px;
+    font-weight: bold;
+    padding: 0 13px 0 13px; }
+  .head .menu__nav .menu__lista .menu__link {
+    color: #000000;
+    text-decoration: none;
+    font-size: 17px;
+    padding: 0.5em;
+    word-spacing: 6.5em;
+    font-family: 'Playfair Display', serif; }
+
+/*Fin Header*/
+.contenedor {
+  background-color: #ece8e1; }
+  .contenedor .titulo {
+    padding: 5%;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 2px;
+    font-size: 3.8rem;
+    font-weight: 500px;
+    color: #fdb3a5;
+    text-transform: uppercase; }
+  .contenedor .grid {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "noticia1 noticia2 noticia3" "noticia4 noticia5 noticia6";
+    justify-items: center; }
+    .contenedor .grid #noticia1 {
+      grid-area: noticia1;
+      height: 60%; }
+    .contenedor .grid #noticia2 {
+      grid-area: noticia2; }
+    .contenedor .grid #noticia3 {
+      grid-area: noticia3;
+      height: 60%; }
+    .contenedor .grid #noticia4 {
+      grid-area: noticia4;
+      position: relative;
+      bottom: 33%; }
+    .contenedor .grid #noticia5 {
+      grid-area: noticia5;
+      position: relative;
+      height: 60%;
+      bottom: 3%; }
+    .contenedor .grid #noticia6 {
+      grid-area: noticia6;
+      height: 68%;
+      position: relative;
+      bottom: 33%; }
+    .contenedor .grid .grid__noticias {
+      width: 80%;
+      margin-top: 50px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      border-bottom: 2px solid #ccc;
+      border: 1px solid #fccfa6; }
+      .contenedor .grid .grid__noticias .noticias__card .card__img {
+        text-align: center;
+        text-transform: uppercase; }
+        .contenedor .grid .grid__noticias .noticias__card .card__img img {
+          width: 100%; }
+      .contenedor .grid .grid__noticias .noticias__card .card__infonews {
+        text-transform: uppercase;
+        font-family: 'IBM Plex Sans', sans-serif;
+        font-size: 15px;
+        text-align: left;
+        padding: 0px 15px 0 15px; }
+        .contenedor .grid .grid__noticias .noticias__card .card__infonews time {
+          margin-bottom: 20px;
+          opacity: .9;
+          font-family: serif; }
+        .contenedor .grid .grid__noticias .noticias__card .card__infonews p p {
+          font-size: .8em; }
+
+/*INICIO FOOTER*/
+.footer {
+  background-image: linear-gradient(to bottom, #fccfa6, #fdb3a5, #fe97a4, #fe7ba3, #ff5fa2);
+  height: 285px;
+  width: auto;
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  grid-template-rows: 50% 50%;
+  grid-template-areas: ". foot1 ." ". info_footer .";
+  justify-items: center; }
+  .footer .footer__caja {
+    grid-area: foot1;
+    justify-items: center; }
+    .footer .footer__caja img {
+      height: 100px; }
+    .footer .footer__caja .caja__icons i {
+      text-align: center;
+      margin: 5px;
+      width: 20px; }
+    .footer .footer__caja .caja__icons a {
+      color: black; }
+  .footer .footer {
+    margin: 0px;
+    background-image: linear-gradient(to bottom, #fccfa6, #fdb3a5, #fe97a4, #fe7ba3, #ff5fa2);
+    height: 285px;
+    width: auto;
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas: ". foot1 ." ". info_footer .";
+    justify-items: center; }
+    .footer .footer .footer__caja {
+      grid-area: foot1;
+      justify-items: center; }
+      .footer .footer .footer__caja img {
+        height: 100px; }
+      .footer .footer .footer__caja .caja__icons i {
+        text-align: center;
+        margin: 5px;
+        width: 20px; }
+      .footer .footer .footer__caja .caja__icons a {
+        color: black; }
+    .footer .footer .info_footer {
+      grid-area: info_footer;
+      text-align: center; }
+      .footer .footer .info_footer a {
+        text-decoration: none;
+        color: #5d1dbd; }
+      .footer .footer .info_footer p {
+        color: #ffffff;
+        margin: 0; }
+      .footer .footer .info_footer a :hover {
+        color: #000000; }
+
+/*FIN FOOTER*/
+/*MOBILE*/
+@media only screen and (max-width: 600px) {
+  .head .head__menu .logo {
+    height: 50px; }
+  .head .head__menu .menu-btn {
+    display: block; }
+  .head .menu__nav ul.menu__lista {
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #ff5fa2;
+    padding: 30px;
+    opacity: .9;
+    transform: translateX(-600px);
+    transition: transform .5s ease-in-out; }
+    .head .menu__nav ul.menu__lista.show {
+      transform: translateX(0px); }
+    .head .menu__nav ul.menu__lista li.menu__item {
+      padding: 10px; }
+      .head .menu__nav ul.menu__lista li.menu__item a {
+        color: #ffffff; }
+  .contenedor {
+    background-color: #ece8e1; }
+    .contenedor .titulo {
+      font-size: 2.9rem; }
+    .contenedor .grid {
+      height: 100%;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(6, 1fr);
+      grid-template-areas: "noticia1" "noticia2" "noticia3" "noticia4" "noticia5" "noticia6";
+      align-items: center; }
+      .contenedor .grid #noticia1 {
+        grid-area: noticia1;
+        bottom: 0;
+        height: auto; }
+      .contenedor .grid #noticia2 {
+        grid-area: noticia2;
+        bottom: 0; }
+      .contenedor .grid #noticia3 {
+        grid-area: noticia3;
+        height: 70%; }
+      .contenedor .grid #noticia4 {
+        bottom: 0px; }
+      .contenedor .grid #noticia5 {
+        grid-area: noticia5;
+        height: auto; }
+      .contenedor .grid #noticia6 {
+        grid-area: noticia6;
+        bottom: 0;
+        height: auto;
+        align-self: flex-start; }
+      .contenedor .grid .grid__noticias {
+        height: 100%;
+        margin-top: 0px;
+        width: 300px;
+        box-shadow: 15px; }
+        .contenedor .grid .grid__noticias .noticias__card {
+          margin: 0; }
+          .contenedor .grid .grid__noticias .noticias__card .card__img {
+            text-align: center;
+            height: 80%; }
+            .contenedor .grid .grid__noticias .noticias__card .card__img img {
+              width: 300px;
+              height: auto; }
+          .contenedor .grid .grid__noticias .noticias__card .card__infonews {
+            font-size: 13.5px; }
+            .contenedor .grid .grid__noticias .noticias__card .card__infonews time {
+              opacity: 0.8;
+              font-family: initial;
+              align-self: flex-start; }
+            .contenedor .grid .grid__noticias .noticias__card .card__infonews p {
+              font-size: 10px;
+              margin-left: 5px; }
+  .titulo {
+    font-size: 25px; } }
+
+/*MOBILE*/
+/*TABLET*/
+@media only screen and (min-width: 600px) {
+  .head .head__menu .logo {
+    height: 70px; }
+  .head .head__menu .menu__nav .menu__lista {
+    font-size: 30px;
+    display: flex;
+    justify-content: end;
+    width: 60px; }
+    .head .head__menu .menu__nav .menu__lista li :hover {
+      color: #fe97a4;
+      border-radius: 15px;
+      font-weight: bold;
+      padding: 0 13px 0 13px; }
+    .head .head__menu .menu__nav .menu__lista .menu__link {
+      font-size: 16px;
+      padding: 0.5em;
+      word-spacing: 6.5em;
+      font-family: 'Playfair Display', serif; }
+  .contenedor {
+    background-color: #ece8e1; }
+    .contenedor .grid {
+      height: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr) 0.5fr;
+      grid-template-areas: "noticia1 noticia2" "noticia4 noticia3" "noticia5 noticia6";
+      justify-items: center; }
+      .contenedor .grid #noticia1 {
+        grid-area: noticia1; }
+      .contenedor .grid #noticia2 {
+        grid-area: noticia2; }
+      .contenedor .grid #noticia3 {
+        grid-area: noticia3; }
+      .contenedor .grid #noticia4 {
+        grid-area: noticia4; }
+      .contenedor .grid #noticia5 {
+        grid-area: noticia5;
+        height: 80%;
+        position: relative;
+        bottom: 46%; }
+      .contenedor .grid #noticia6 {
+        grid-area: noticia6;
+        height: 85%;
+        position: relative;
+        bottom: 43%; }
+      .contenedor .grid .grid__noticias {
+        width: 80%;
+        margin-top: 50px;
+        background-color: #f0f0fc;
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border: 2px solid #fccfa6; }
+        .contenedor .grid .grid__noticias .noticias__card .card__img {
+          text-align: center;
+          text-transform: uppercase;
+          transition: 1s; }
+          .contenedor .grid .grid__noticias .noticias__card .card__img img {
+            width: 100%; }
+        .contenedor .grid .grid__noticias .noticias__card .card__infonews {
+          text-transform: uppercase;
+          font-family: 'IBM Plex Sans', sans-serif;
+          font-size: 15px;
+          text-align: left; }
+          .contenedor .grid .grid__noticias .noticias__card .card__infonews time {
+            margin-bottom: 20px; }
+          .contenedor .grid .grid__noticias .noticias__card .card__infonews p {
+            padding-top: 15px;
+            font-size: .8em; } }
+
+.footer {
+  margin: 0px;
+  background-image: linear-gradient(to bottom, #fccfa6, #fdb3a5, #fe97a4, #fe7ba3, #ff5fa2);
+  height: 285px;
+  width: auto;
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  grid-template-rows: 50% 50%;
+  grid-template-areas: ". foot1 ." ". info_footer .";
+  justify-items: center; }
+  .footer .footer__caja {
+    grid-area: foot1;
+    justify-items: center; }
+    .footer .footer__caja img {
+      height: 100px; }
+    .footer .footer__caja .caja__icons i {
+      text-align: center;
+      margin: 5px;
+      width: 20px; }
+    .footer .footer__caja .caja__icons a {
+      color: black; }
+  .footer .info_footer {
+    grid-area: info_footer;
+    text-align: center; }
+    .footer .info_footer a {
+      text-decoration: none;
+      color: #5d1dbd; }
+    .footer .info_footer p {
+      color: #ffffff;
+      margin: 0; }
+    .footer .info_footer a :hover {
+      color: #000000; }
+
+/*TABLET*/
+/*DESKTOP*/
+@media only screen and (min-width: 900px) {
+  .head .head__menu .logo {
+    height: 70px; }
+  .contenedor {
+    background-color: #ece8e1; }
+    .contenedor .grid {
+      height: 100%;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-areas: "noticia1 noticia2 noticia3" "noticia4 noticia5 noticia6";
+      justify-items: center; }
+      .contenedor .grid #noticia1 {
+        grid-area: noticia1;
+        height: 60%; }
+      .contenedor .grid #noticia2 {
+        grid-area: noticia2; }
+      .contenedor .grid #noticia3 {
+        grid-area: noticia3;
+        height: 60%; }
+      .contenedor .grid #noticia4 {
+        grid-area: noticia4;
+        position: relative;
+        bottom: 33%; }
+      .contenedor .grid #noticia5 {
+        grid-area: noticia5;
+        position: relative;
+        height: 60%;
+        bottom: 3%; }
+      .contenedor .grid #noticia6 {
+        grid-area: noticia6;
+        height: 68%;
+        position: relative;
+        bottom: 33%; }
+      .contenedor .grid .grid__noticias {
+        width: 80%;
+        margin-top: 50px;
+        background-color: #f0f0fc;
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        border: 2px solid #fccfa6; }
+        .contenedor .grid .grid__noticias .noticias__card .card__img {
+          text-align: center;
+          text-transform: uppercase;
+          transition: 1s; }
+          .contenedor .grid .grid__noticias .noticias__card .card__img img {
+            width: 100%; }
+        .contenedor .grid .grid__noticias .noticias__card .card__infonews {
+          text-transform: uppercase;
+          font-family: 'IBM Plex Sans', sans-serif;
+          font-size: 15px;
+          text-align: left; }
+          .contenedor .grid .grid__noticias .noticias__card .card__infonews time {
+            margin-bottom: 20px; }
+          .contenedor .grid .grid__noticias .noticias__card .card__infonews p {
+            padding-top: 20px; } }
+
+/*DESKTOP*/
+/*-----------------ACABA NOTICIAS---------------------*/
+/*-----------------INICIA TIENDA---------------------*/
+/*OPERADORES*/
+/*OPERADORES*/
+* {
+  margin: 0;
+  padding: 0; }
+
+/*Inicio header*/
+.head .head__menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .head .head__menu .logo {
+    height: 100px; }
+  .head .head__menu .menu-btn {
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+    display: none; }
+
+.head .menu__nav .menu__lista {
+  font-size: 20px;
+  list-style: none;
+  list-style-type: none;
+  display: flex;
+  justify-content: end; }
+  .head .menu__nav .menu__lista li :hover {
+    color: #fe97a4;
+    border-radius: 15px;
+    font-weight: bold;
+    padding: 0 13px 0 13px; }
+  .head .menu__nav .menu__lista .menu__link {
+    color: #000000;
+    text-decoration: none;
+    font-size: 17px;
+    padding: 0.5em;
+    word-spacing: 6.5em;
+    font-family: 'Playfair Display', serif; }
+
+/*Fin Header*/
+/*Inicio Section*/
+.contenedor {
+  background-color: #ece8e1; }
+  .contenedor .contenedor__titulo, .contenedor .contenedor__producto .contenedor__cardproducto h5 {
+    padding: 5%;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 2px;
+    font-size: 3.8rem;
+    font-weight: 500px;
+    color: #fdb3a5;
+    text-transform: uppercase; }
+  .contenedor .contenedor__producto {
+    margin: 3% 3% 0% 3%;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: "producto1 producto2 producto3" "producto4 producto5 producto6" ". producto7 .";
+    justify-items: center; }
+    .contenedor .contenedor__producto #producto1 {
+      grid-area: producto1; }
+    .contenedor .contenedor__producto #producto2 {
+      grid-area: producto2; }
+    .contenedor .contenedor__producto #producto3 {
+      grid-area: producto3; }
+    .contenedor .contenedor__producto #producto4 {
+      grid-area: producto4; }
+    .contenedor .contenedor__producto #producto5 {
+      grid-area: producto5; }
+    .contenedor .contenedor__producto #producto6 {
+      grid-area: producto6; }
+    .contenedor .contenedor__producto #producto7 {
+      grid-area: producto7; }
+    .contenedor .contenedor__producto .contenedor__cardproducto {
+      justify-self: center;
+      text-align: center;
+      margin: 20px;
+      text-transform: uppercase;
+      transition: 1s; }
+      .contenedor .contenedor__producto .contenedor__cardproducto h5 {
+        font-weight: 600;
+        color: #000; }
+      .contenedor .contenedor__producto .contenedor__cardproducto .cardproducto__img {
+        margin-bottom: 20px; }
+        .contenedor .contenedor__producto .contenedor__cardproducto .cardproducto__img :hover {
+          transition: 1s;
+          transform: scale(1.05); }
+
+/*Fin Section*/
+/*INICIO FOOTER*/
+.footer {
+  margin: 0px;
+  background-image: linear-gradient(to bottom, #fccfa6, #fdb3a5, #fe97a4, #fe7ba3, #ff5fa2);
+  height: 285px;
+  width: auto;
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  grid-template-rows: 50% 50%;
+  grid-template-areas: ". foot1 ." ". info_footer .";
+  justify-items: center; }
+  .footer .footer__caja {
+    grid-area: foot1;
+    justify-items: center; }
+    .footer .footer__caja img {
+      height: 100px; }
+    .footer .footer__caja .caja__icons i {
+      text-align: center;
+      margin: 5px;
+      width: 20px; }
+    .footer .footer__caja .caja__icons a {
+      color: black; }
+  .footer .info_footer {
+    grid-area: info_footer;
+    text-align: center; }
+    .footer .info_footer a {
+      text-decoration: none;
+      color: #5d1dbd; }
+    .footer .info_footer p {
+      color: #ffffff;
+      margin: 0; }
+    .footer .info_footer a :hover {
+      color: #000000; }
+
+/*FIN FOOTER*/
+/*FIN FOOTER*/
+/*Fin footer*/
+@media only screen and (max-width: 600px) {
+  /*Inicio header*/
+  .head .head__menu .logo {
+    height: 50px; }
+  .head .head__menu .menu-btn {
+    display: block; }
+  .head .menu__nav ul.menu__lista {
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #ff5fa2;
+    padding: 30px;
+    opacity: .9;
+    transform: translateX(-600px);
+    transition: transform .5s ease-in-out; }
+    .head .menu__nav ul.menu__lista.show {
+      transform: translateX(0px); }
+    .head .menu__nav ul.menu__lista li.menu__item {
+      padding: 10px; }
+      .head .menu__nav ul.menu__lista li.menu__item a {
+        color: #ffffff; }
+  /*Fin Header*/
+  /*Inicio Section*/
+  .contenedor .contenedor__titulo, .contenedor .contenedor__producto .contenedor__cardproducto h5 {
+    padding: 5%;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 2px;
+    font-size: 2.9rem;
+    font-weight: 500px;
+    color: #fdb3a5;
+    text-transform: uppercase; }
+  .contenedor .contenedor__producto {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(4, 25%);
+    row-gap: 15px;
+    grid-template-areas: "producto1 producto2" "producto3 producto4" "producto5 producto6" "producto7 producto7";
+    align-items: center; }
+    .contenedor .contenedor__producto #producto1 {
+      grid-area: producto1; }
+    .contenedor .contenedor__producto #producto2 {
+      grid-area: producto2; }
+    .contenedor .contenedor__producto #producto3 {
+      grid-area: producto3; }
+    .contenedor .contenedor__producto #producto4 {
+      grid-area: producto4; }
+    .contenedor .contenedor__producto #producto5 {
+      grid-area: producto5; }
+    .contenedor .contenedor__producto #producto6 {
+      grid-area: producto6; }
+    .contenedor .contenedor__producto #producto7 {
+      grid-area: producto7; }
+    .contenedor .contenedor__producto .contenedor__cardproducto {
+      justify-self: center;
+      margin: 0;
+      text-transform: uppercase;
+      transition: 1s; }
+      .contenedor .contenedor__producto .contenedor__cardproducto h5 {
+        font-weight: 600;
+        font-size: 0.7em;
+        margin: 15px 0 10px 0; }
+      .contenedor .contenedor__producto .contenedor__cardproducto p {
+        margin: 10px; }
+      .contenedor .contenedor__producto .contenedor__cardproducto .cardproducto__img {
+        padding-bottom: 7px; }
+        .contenedor .contenedor__producto .contenedor__cardproducto .cardproducto__img img {
+          width: 80%;
+          height: auto;
+          padding-bottom: 7px;
+          border-bottom: 2px solid #fe97a4; }
+        .contenedor .contenedor__producto .contenedor__cardproducto .cardproducto__img :hover {
+          transition: 1s;
+          transform: scale(1.05); }
+  /*Fin Section*/
+  /*INICIO FOOTER*/
+  .footer .info_footer {
+    grid-area: info_footer;
+    text-align: center; }
+    .footer .info_footer a {
+      text-decoration: none;
+      color: #5d1dbd; }
+    .footer .info_footer p {
+      color: #ffffff;
+      margin: 0;
+      font-size: 12px; }
+    .footer .info_footer a :hover {
+      color: #000000; }
+  /*FIN FOOTER*/ }
+
+@media only screen and (min-width: 600px) {
+  .head .head__menu .logo {
+    height: 70px; }
+  .head .head__menu .menu__nav .menu__lista {
+    font-size: 30px;
+    display: flex;
+    justify-content: end;
+    width: 60px; }
+    .head .head__menu .menu__nav .menu__lista li :hover {
+      color: #fe97a4;
+      border-radius: 15px;
+      font-weight: bold;
+      padding: 0 13px 0 13px; }
+    .head .head__menu .menu__nav .menu__lista .menu__link {
+      font-size: 16px;
+      padding: 0.5em;
+      word-spacing: 6.5em;
+      font-family: 'Playfair Display', serif; }
+  .contenedor .contenedor__producto {
+    width: 100%;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "producto1 producto2 producto3" "producto4 producto5 producto6" ". producto7 .";
+    margin: 0px; }
+    .contenedor .contenedor__producto #producto1 {
+      grid-area: producto1; }
+    .contenedor .contenedor__producto #producto2 {
+      grid-area: producto2; }
+    .contenedor .contenedor__producto #producto3 {
+      grid-area: producto3; }
+    .contenedor .contenedor__producto #producto4 {
+      grid-area: producto4; }
+    .contenedor .contenedor__producto #producto5 {
+      grid-area: producto5; }
+    .contenedor .contenedor__producto #producto6 {
+      grid-area: producto6; }
+    .contenedor .contenedor__producto #producto7 {
+      grid-area: producto7; }
+    .contenedor .contenedor__producto .contenedor__cardproducto {
+      width: 80%;
+      margin: 0px;
+      text-transform: uppercase;
+      transition: 1s; }
+      .contenedor .contenedor__producto .contenedor__cardproducto h5 {
+        font-weight: 600;
+        font-size: 15px; }
+      .contenedor .contenedor__producto .contenedor__cardproducto .cardproducto__img {
+        padding-bottom: 7px;
+        border-bottom: 2px solid #fe97a4; }
+        .contenedor .contenedor__producto .contenedor__cardproducto .cardproducto__img img {
+          width: 80%;
+          height: auto; }
+        .contenedor .contenedor__producto .contenedor__cardproducto .cardproducto__img :hover {
+          transition: 1s;
+          transform: scale(0, 1, 2); } }
+
+@media only screen and (min-width: 900px) {
+  /*Inicio header*/
+  .head .head__menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    .head .head__menu .logo {
+      height: 70px; }
+  /*Fin Header*/
+  /*Inicio Section*/
+  .contenedor .contenedor__producto {
+    margin: 30px 0 0 0;
+    display: grid;
+    grid-template-columns: repeat(3 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: "producto1 producto2 producto3" "producto4 producto5 producto6" ". producto7 ."; }
+    .contenedor .contenedor__producto #producto1 {
+      grid-area: producto1; }
+    .contenedor .contenedor__producto #producto2 {
+      grid-area: producto2; }
+    .contenedor .contenedor__producto #producto3 {
+      grid-area: producto3; }
+    .contenedor .contenedor__producto #producto4 {
+      grid-area: producto4; }
+    .contenedor .contenedor__producto #producto5 {
+      grid-area: producto5; }
+    .contenedor .contenedor__producto #producto6 {
+      grid-area: producto6; }
+    .contenedor .contenedor__producto #producto7 {
+      grid-area: producto7; }
+    .contenedor .contenedor__producto .contenedor__cardproducto {
+      justify-self: none;
+      text-transform: uppercase;
+      width: 50%;
+      transition: 1s;
+      width: 50%; }
+      .contenedor .contenedor__producto .contenedor__cardproducto h5 {
+        font-weight: 600;
+        font-size: .8em;
+        padding: 0; }
+      .contenedor .contenedor__producto .contenedor__cardproducto .cardproducto__img {
+        margin-bottom: 20px;
+        width: 100%; }
+        .contenedor .contenedor__producto .contenedor__cardproducto .cardproducto__img img {
+          width: 100%;
+          height: auto; }
+        .contenedor .contenedor__producto .contenedor__cardproducto .cardproducto__img :hover {
+          transition: 1s;
+          transform: scale(1.05); }
+  /*Fin Section*/ }
+
+/*-----------------ACABA TIENDA---------------------*/
+/*-----------------INICIA DISCOGRAFÍA---------------------*/
+/*VARS COLORS*/
+/*VARS COLORS*/
+* {
+  margin: 0px;
+  padding: 0px; }
+
+.head .head__menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .head .head__menu .logo {
+    height: 100px; }
+  .head .head__menu .menu-btn {
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+    display: none; }
+
+.head .menu__nav .menu__lista {
+  font-size: 20px;
+  list-style: none;
+  list-style-type: none;
+  display: flex;
+  justify-content: end; }
+  .head .menu__nav .menu__lista li :hover {
+    color: #fe97a4;
+    border-radius: 15px;
+    font-weight: bold;
+    padding: 0 13px 0 13px; }
+  .head .menu__nav .menu__lista .menu__link {
+    color: #000000;
+    text-decoration: none;
+    font-size: 17px;
+    padding: 0.5em;
+    word-spacing: 6.5em;
+    font-family: 'Playfair Display', serif; }
+
+main {
+  background-color: #ece8e1; }
+  main .titulo {
+    padding: 5%;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 2px;
+    font-size: 3.3rem;
+    font-weight: 500;
+    color: #0f1923;
+    text-transform: uppercase; }
+
+.titulo--2 {
+  text-align: center;
+  font-family: 'Playfair Display', italic;
+  font-weight: bold;
+  font-size: 1, 5rem;
+  color: #fe7ba3; }
+
+.discografia {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; }
+  .discografia .discografia__caja {
+    height: auto;
+    width: 33%;
+    padding: 3%; }
+    .discografia .discografia__caja .caja__info {
+      color: #fdb3a5;
+      text-align: center;
+      font-family: 'Fredoka One', cursive;
+      padding: 5% 0 1% 0; }
+    .discografia .discografia__caja .caja__disco {
+      width: 100%;
+      margin-top: 10px;
+      border-radius: 5%;
+      padding: 15px;
+      display: flex;
+      justify-content: space-evenly; }
+      .discografia .discografia__caja .caja__disco .disco__img {
+        width: 60%; }
+        .discografia .discografia__caja .caja__disco .disco__img img {
+          width: 100%; }
+      .discografia .discografia__caja .caja__disco .disco__iframe {
+        width: 40%;
+        margin: 3%; }
+
+.footer {
+  padding: 1% 0 1%;
+  background-image: linear-gradient(to bottom, #fccfa6, #fdb3a5, #fe97a4, #fe7ba3, #ff5fa2);
+  height: 100%;
+  width: auto;
+  display: grid;
+  grid-template-columns: 30% 40% 30%;
+  grid-template-rows: 50% 50%;
+  grid-template-areas: ". foot1 foot2" ". info_footer foot2";
+  justify-items: center;
+  align-items: center; }
+  .footer #logoPP {
+    width: 80px; }
+  .footer .footer__caja {
+    grid-area: foot1;
+    text-align: center;
+    width: 18%; }
+    .footer .footer__caja #logoPP {
+      width: 80px; }
+    .footer .footer__caja img {
+      height: 100px; }
+    .footer .footer__caja .caja__icons {
+      display: flex;
+      justify-content: space-between;
+      padding: 10% 0 0 0; }
+      .footer .footer__caja .caja__icons a {
+        text-align: center;
+        color: black; }
+        .footer .footer__caja .caja__icons a i {
+          text-align: center;
+          margin: 5px;
+          width: 20px; }
+      .footer .footer__caja .caja__icons a:hover {
+        color: #ffffff;
+        transform: rotate(360deg);
+        transition: 0.6s; }
+  .footer .info_footer {
+    grid-area: info_footer;
+    text-align: center; }
+    .footer .info_footer a {
+      text-decoration: none;
+      color: #5d1dbd; }
+    .footer .info_footer p {
+      color: #ffffff;
+      margin: 0;
+      font-size: .8em; }
+    .footer .info_footer a :hover {
+      color: #000000; }
+  .footer .foot2 {
+    grid-area: foot2;
+    border-left: 1px solid white; }
+    .footer .foot2 ul {
+      list-style: none; }
+      .footer .foot2 ul li {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; }
+        .footer .foot2 ul li a {
+          text-decoration: none;
+          color: white;
+          padding: 10%; }
+        .footer .foot2 ul li :hover {
+          color: #000000;
+          border-radius: 15px;
+          font-weight: bold;
+          padding: 13px 0 13px 0;
+          transition: 0.41s; }
+
+/*FIN FOOTER*/
+@media only screen and (max-width: 600px) {
+  .head .head__menu .logo {
+    height: 50px; }
+  .head .head__menu .menu-btn {
+    display: block;
+    color: #000; }
+  .head .menu__nav ul.menu__lista {
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #ff5fa2;
+    padding: 30px;
+    opacity: .9;
+    transform: translateX(-600px);
+    transition: transform .5s ease-in-out; }
+    .head .menu__nav ul.menu__lista.show {
+      transform: translateX(0px); }
+    .head .menu__nav ul.menu__lista li.menu__item {
+      padding: 10px; }
+      .head .menu__nav ul.menu__lista li.menu__item a {
+        color: #ffffff; }
+  .contenedor {
+    background-color: #ece8e1; }
+    .contenedor .titulo {
+      font-size: 2.6rem; }
+  .discografia {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; }
+    .discografia .discografia__caja {
+      height: auto;
+      width: 90%;
+      padding: 3%; }
+      .discografia .discografia__caja .caja__info {
+        color: #fdb3a5;
+        text-align: center;
+        font-family: 'Fredoka One', cursive;
+        padding: 5% 0 1% 0; }
+      .discografia .discografia__caja .caja__disco {
+        width: 100%;
+        margin-top: 10px;
+        border-radius: 5%;
+        padding: 15px;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center; }
+        .discografia .discografia__caja .caja__disco .disco__img {
+          width: 100%; }
+          .discografia .discografia__caja .caja__disco .disco__img img {
+            width: 100%; }
+        .discografia .discografia__caja .caja__disco .disco__iframe {
+          width: 90%;
+          margin: 3% 0; } }
+
+@media only screen and (min-width: 600px) {
+  .head .head__menu .logo {
+    height: 70px; }
+  .head .head__menu .menu__nav .menu__lista {
+    font-size: 30px;
+    display: flex;
+    justify-content: end;
+    width: 60px; }
+    .head .head__menu .menu__nav .menu__lista li :hover {
+      color: #fe97a4;
+      border-radius: 15px;
+      font-weight: bold;
+      padding: 0 13px 0 13px; }
+    .head .head__menu .menu__nav .menu__lista .menu__link {
+      font-size: 16px;
+      padding: 0.5em;
+      word-spacing: 6.5em;
+      font-family: 'Playfair Display', serif; }
+  .discografia {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; }
+    .discografia .discografia__caja {
+      width: 100%;
+      padding: 3% 0; }
+      .discografia .discografia__caja .caja__info {
+        color: #fdb3a5;
+        text-align: center;
+        font-family: 'Fredoka One', cursive;
+        padding: 0 1% 0; }
+      .discografia .discografia__caja .caja__disco {
+        width: 100%;
+        margin-top: 10px;
+        border-radius: 5%;
+        padding: 2%;
+        display: flex;
+        justify-content: space-evenly; }
+        .discografia .discografia__caja .caja__disco .disco__img {
+          width: 50%;
+          justify-self: center; }
+          .discografia .discografia__caja .caja__disco .disco__img img {
+            width: 100%; }
+        .discografia .discografia__caja .caja__disco .disco__iframe {
+          width: 40%;
+          margin: 2%; }
+          .discografia .discografia__caja .caja__disco .disco__iframe iframe {
+            height: 100%; }
+  .info_footer p {
+    color: #ffffff;
+    margin: 0;
+    font-size: 12px; } }
+
+@media only screen and (min-width: 900px) {
+  .head .head__menu .logo {
+    height: 70px; }
+  .discografia {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; }
+    .discografia .discografia__caja {
+      height: auto;
+      width: 50%;
+      padding: 3%; }
+      .discografia .discografia__caja .caja__info {
+        color: #fdb3a5;
+        text-align: center;
+        font-family: 'Fredoka One', cursive;
+        padding: 5% 0 1% 0; }
+      .discografia .discografia__caja .caja__disco {
+        width: 100%;
+        margin-top: 10px;
+        border-radius: 5%;
+        padding: 15px;
+        display: flex;
+        justify-content: space-evenly; }
+        .discografia .discografia__caja .caja__disco .disco__img {
+          width: 60%; }
+          .discografia .discografia__caja .caja__disco .disco__img img {
+            width: 100%; }
+        .discografia .discografia__caja .caja__disco .disco__iframe {
+          width: 40%;
+          margin: 3%; } }
+
+/*-----------------ACABA DISCOGRAFÍA---------------------*/

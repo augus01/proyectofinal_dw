@@ -1,0 +1,543 @@
+/*VARS COLORS*/
+$color1:#fccfa6;
+$color2:#fdb3a5;
+$color3:#fe97a4;
+$color4:#fe7ba3;
+$color5:#ff5fa2;
+/*VARS COLORS*/
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.head {
+
+    .head__menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .logo {
+            height: 100px;
+        }
+
+        .menu-btn {
+            position: absolute;
+            right: 20px;
+            cursor: pointer;
+            display: none;
+        }
+    }
+
+
+    .menu__nav {
+
+        .menu__lista {
+            font-size: 20px;
+            list-style: none;
+            list-style-type: none;
+            display: flex;
+            justify-content: end;
+
+            li {
+                :hover {
+                    color: #fe97a4;
+                    border-radius: 15px;
+                    font-weight: bold;
+                    padding: 0 13px 0 13px;
+                }
+            }
+
+            .menu__link {
+                color: #000000;
+                text-decoration: none;
+                font-size: 17px;
+                padding: 0.5em;
+                word-spacing: 6.5em;
+                font-family: 'Playfair Display', serif;
+
+
+            }
+        }
+    }
+
+}
+
+
+main {
+    background-color: #ece8e1;
+
+    .titulo {
+        padding: 5%;
+        text-align: center;
+        font-family: 'Playfair Display', serif;
+        letter-spacing: 2px;
+        font-size: 3.3rem;
+        font-weight: 500;
+        color: #0f1923;
+        text-transform: uppercase;
+    }
+}
+
+.titulo--2 {
+
+    text-align: center;
+    font-family: 'Playfair Display', italic;
+    font-weight: bold;
+    font-size: 1, 5rem;
+    color: $color4;
+
+}
+
+.discografia {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+
+    .discografia__caja {
+        height: auto;
+        width: 33%;
+
+        padding: 3%;
+
+        .caja__info {
+            color: $color2;
+            text-align: center;
+
+            font-family: 'Fredoka One', cursive;
+            padding: 5% 0 1% 0;
+        }
+
+
+        .caja__disco {
+
+            width: 100%;
+            margin-top: 10px;
+            border-radius: 5%;
+            padding: 15px;
+            display: flex;
+            justify-content: space-evenly;
+
+            .disco__img {
+                width: 60%;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .disco__iframe {
+                width: 40%;
+                margin: 3%;
+
+            }
+        }
+    }
+}
+
+.footer {
+    padding: 1% 0 1%;
+    background-image: linear-gradient(to bottom, #fccfa6, #fdb3a5, #fe97a4, #fe7ba3, #ff5fa2);
+    height: 100%;
+    width: auto;
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas:". foot1 foot2"
+                        ". info_footer foot2";
+    justify-items: center;
+    align-items: center;
+    #logoPP{
+        width: 80px;
+    }
+
+
+    .footer__caja {
+        grid-area: foot1;
+        text-align: center;
+        width: 18%;
+        #logoPP{
+            width: 80px;
+            
+        }
+
+        img {
+            height: 100px;
+        }
+
+        .caja__icons {
+                display: flex;
+                justify-content: space-between;
+                padding: 10% 0 0 0;
+                
+                a {
+                    text-align: center;
+                    color: black;
+
+                    i {
+                        text-align: center;
+                        margin: 5px;
+                        width: 20px;
+                        
+                    }
+                }
+            
+            
+
+                a:hover{
+                    color: #ffffff;
+                    transform: rotate(360deg);
+                    transition: 0.6s;
+                }
+                
+
+
+        }
+
+    }
+
+    .info_footer {
+        grid-area: info_footer;
+        text-align: center;
+
+        a {
+            text-decoration: none;
+            color: #5d1dbd;
+        }
+
+        p {
+            color: #ffffff;
+            margin: 0;
+            font-size: .8em;
+        }
+
+        a :hover {
+            color: #000000;
+        }
+    }
+
+    .foot2{
+        grid-area: foot2;
+        border-left: 1px solid white;
+        ul{
+            list-style: none;
+            
+            li{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                a{
+                    text-decoration: none;
+                    color: white;
+                    padding: 10%;
+                    
+                }
+                :hover {
+                    color: #000000;
+                    border-radius: 15px;
+                    font-weight: bold;
+                    padding: 13px 0 13px 0;
+                    transition: 0.41s;
+                }
+            }
+        }
+    }
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+}
+
+/*FIN FOOTER*/
+
+@media only screen and(max-width:600px) {
+
+    .head {
+        .head__menu {
+
+            .logo {
+                height: 50px;
+            }
+
+            .menu-btn {
+                display: block;
+                color: #000;
+            }
+        }
+
+
+
+        .menu__nav {
+
+            ul.menu__lista {
+                height: 100%;
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: #ff5fa2;
+                padding: 30px;
+                opacity: .9;
+                transform: translateX(-600px);
+                transition: transform .5s ease-in-out;
+
+                &.show {
+                    transform: translateX(0px);
+                }
+
+                li.menu__item {
+
+                    padding: 10px;
+
+                    a {
+                        color: #ffffff;
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+    .contenedor {
+        background-color: #ece8e1;
+    
+        .titulo {
+            font-size: 2.6rem;
+        }
+        }
+
+    .discografia {
+        
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+
+        .discografia__caja {
+            height: auto;
+            width: 90%;
+
+            padding: 3%;
+
+            .caja__info {
+                color: $color2;
+                text-align: center;
+
+                font-family: 'Fredoka One', cursive;
+                padding: 5% 0 1% 0;
+            }
+
+
+            .caja__disco {
+
+                width: 100%;
+                margin-top: 10px;
+                border-radius: 5%;
+                padding: 15px;
+                display: flex;
+                justify-content: space-evenly;
+                flex-direction: column;
+                align-items: center;
+
+                .disco__img {
+                    width: 100%;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                .disco__iframe {
+                    width: 90%;
+                    margin: 3% 0;
+
+                }
+            }
+        }
+    }
+
+
+
+
+}
+
+@media only screen and(min-width:600px) {
+    .head {
+        .head__menu {
+
+            .logo {
+                height: 70px;
+            }
+
+            .menu__nav {
+
+                .menu__lista {
+                    font-size: 30px;
+                    display: flex;
+                    justify-content: end;
+                    width: 60px;
+
+                    li :hover {
+                        color: #fe97a4;
+                        border-radius: 15px;
+                        font-weight: bold;
+                        padding: 0 13px 0 13px;
+                    }
+
+                    .menu__link {
+                        font-size: 16px;
+                        padding: 0.5em;
+                        word-spacing: 6.5em;
+                        font-family: 'Playfair Display', serif;
+
+
+                    }
+                }
+            }
+        }
+
+    }
+
+    .discografia {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+
+        .discografia__caja {
+
+            width: 100%;
+            padding: 3% 0;
+
+            .caja__info {
+                color: $color2;
+                text-align: center;
+
+                font-family: 'Fredoka One', cursive;
+                padding: 0 1% 0;
+            }
+
+
+            .caja__disco {
+                width: 100%;
+                margin-top: 10px;
+                border-radius: 5%;
+                padding: 2%;
+                display: flex;
+                justify-content: space-evenly;
+
+
+                .disco__img {
+                    width: 50%;
+                    justify-self: center;
+
+                    img {
+                        width: 100%;
+
+                    }
+                }
+
+                .disco__iframe {
+
+                    width: 40%;
+                    margin: 2%;
+
+                    iframe {
+                        height: 100%;
+                    }
+
+                }
+            }
+        }
+    }
+
+    .info_footer {
+        p {
+            color: #ffffff;
+            margin: 0;
+            font-size: 12px;
+        }
+    }
+}
+
+@media only screen and(min-width:900px) {
+    .head {
+        .head__menu {
+            .logo {
+                height: 70px;
+            }
+        }
+    }
+
+    .discografia {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+
+        .discografia__caja {
+            height: auto;
+            width: 50%;
+
+            padding: 3%;
+
+            .caja__info {
+                color: $color2;
+                text-align: center;
+
+                font-family: 'Fredoka One', cursive;
+                padding: 5% 0 1% 0;
+            }
+
+
+            .caja__disco {
+
+                width: 100%;
+                margin-top: 10px;
+                border-radius: 5%;
+                padding: 15px;
+                display: flex;
+                justify-content: space-evenly;
+
+                .disco__img {
+                    width: 60%;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                .disco__iframe {
+                    
+                    width: 40%;
+                    margin: 3%;
+
+                }
+
+                
+            }
+        }
+    }
+
+    
+}
