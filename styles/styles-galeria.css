@@ -12,7 +12,7 @@
 }
 
 .head .head__menu .logo {
-    height: 100px;
+    height: 70px;
 }
 
 .head .head__menu .menu-btn {
@@ -23,11 +23,12 @@
 }
 
 .head .menu__nav .menu__lista {
-    font-size: 20px;
     list-style: none;
-    list-style-type: none;
+    font-size: 30px;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
+    width: 60px;
+
 }
 
 .head .menu__nav .menu__lista .menu__link {
@@ -52,6 +53,7 @@
 
 /*Inicio Section*/
 section {
+    padding-bottom: 5%;
     background: #ece8e1;
 }
 
@@ -80,7 +82,7 @@ h3 {
 }
 
 .carruselGeneral {
-    margin: 3% 5%;
+    margin: 3% 3%;
 }
 
 
@@ -111,8 +113,8 @@ h3 {
     display: grid;
     grid-template-columns: 30% 40% 30%;
     grid-template-rows: 50% 50%;
-    grid-template-areas:". foot1 foot2"
-                        ". info_footer foot2";
+    grid-template-areas: ". foot1 foot2"
+        ". info_footer foot2";
     justify-items: center;
     align-items: center;
 }
@@ -123,6 +125,7 @@ h3 {
     justify-items: center;
     text-align: center;
 }
+
 #logoPP {
     width: 80px;
     height: auto;
@@ -147,7 +150,8 @@ h3 {
 .info_footer a :hover {
     color: #000000;
 }
-.icons a{
+
+.icons a {
     color: #000000;
 }
 
@@ -155,29 +159,32 @@ h3 {
     display: flex;
     justify-content: space-between;
     padding: 10% 0 0 0;
-    
+
 }
 
-.icons a:hover{
+.icons a:hover {
     color: #ffffff;
     transform: rotate(360deg);
     transition: 0.5s;
 }
 
-.foot2{
+.foot2 {
     grid-area: foot2;
     border-left: 1px solid white;
 }
-.foot2 ul{
+
+.foot2 ul {
     list-style: none;
-    
+
 }
-.foot2 ul li{
+
+.foot2 ul li {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-.foot2 ul a{
+
+.foot2 ul a {
     text-decoration: none;
     color: white;
     padding: 10%;
@@ -204,8 +211,8 @@ h3 {
     }
 
     /*Inicio header*/
-    
-    
+
+
     .menu__nav ul li a:hover {
         color: #000000;
         border-radius: 15px;
@@ -213,6 +220,7 @@ h3 {
         padding: 13px 0 13px 0;
         transition: 0.41s;
     }
+
     /*Fin Header*/
 
     .head .head__menu .logo {
@@ -248,6 +256,7 @@ h3 {
     .head .menu__nav ul.menu__lista li.menu__item a {
         color: #ffffff;
     }
+
     .info_footer p {
         color: #ffffff;
         margin: 0;
@@ -369,6 +378,7 @@ h3 {
         display: flex;
         justify-content: end;
         width: 60px;
+        justify-content: flex-end;
     }
 
     .head .menu__nav .menu__lista .menu__link {
@@ -384,13 +394,14 @@ h3 {
         font-weight: bold;
         padding: 0 13px 0 13px;
     }
+
     .carruselGeneral {
         margin: 10% 1%;
-        
+
     }
 
 
-    
+
     #foto1N,
     #foto5N,
     #foto6N,

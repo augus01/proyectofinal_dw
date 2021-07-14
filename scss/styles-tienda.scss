@@ -27,7 +27,7 @@ $color5:#ff5fa2;
     .head__menu {
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-around;
 
         .logo {
             height: 100px;
@@ -78,6 +78,9 @@ $color5:#ff5fa2;
 /*Fin Header*/
 
 /*Inicio Section*/
+main{
+    padding-bottom: 25%;
+}
 .contenedor {
     background-color: #ece8e1;
 
@@ -143,7 +146,9 @@ $color5:#ff5fa2;
                 @extend .contenedor__titulo;
                 font-weight: 600;
                 color: #000;
-
+            }
+            p{
+                font-weight: 600;
             }
 
             .cardproducto__img {
@@ -346,6 +351,9 @@ $color5:#ff5fa2;
 
             #producto7 {
                 grid-area: producto7;
+                img{
+                    width: 40%;
+                }
             }
 
             .contenedor__cardproducto {
@@ -570,7 +578,7 @@ $color5:#ff5fa2;
             margin: 30px 0 0 0;
             display: grid;
             grid-template-columns: repeat(3 1fr);
-            grid-template-rows: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 1fr);
             grid-template-areas: "producto1 producto2 producto3"
                 "producto4 producto5 producto6"
                 ". producto7 .";

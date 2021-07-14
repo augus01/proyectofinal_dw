@@ -654,13 +654,12 @@ section {
 
 
     .grillaMiembrosI {
-        margin-right: 5%;
+        margin-right: 0%;
         height: 100%;
         display: grid;
         grid-template-columns: 50% 40%;
         grid-template-areas: "fotoMI infoMI";
         justify-content: center;
-        align-items: center;
     }
 
     .fotoMI {
@@ -686,7 +685,6 @@ section {
 
     /*FIN SECTION*/
 }
-
 /*RESPONSIVE TABLET*/
 
 /*RESPONSIVE DESKTOP*/

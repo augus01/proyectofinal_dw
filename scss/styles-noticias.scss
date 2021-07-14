@@ -101,6 +101,7 @@ $color5:#ff5fa2;
 
         #noticia2 {
             grid-area: noticia2;
+            height: 85%;
         }
 
         #noticia3 {
@@ -146,6 +147,7 @@ $color5:#ff5fa2;
 
                     img {
                         width: 100%;
+                        
                     }
                 }
 
@@ -157,17 +159,19 @@ $color5:#ff5fa2;
                     padding: 0px 15px 0 15px;
 
                     time {
+                        color: #ff5fa2;
+                        font-weight: bold;
+                        font-family: initial;
                         margin-bottom: 20px;
                         opacity: .9;
-                        font-family: serif;
+                        
                     }
+
 
                     p {
-                        p {
-
-                            font-size: .8em;
-                        }
+                        font-size: .8em;
                     }
+                
 
                 }
             }
@@ -416,7 +420,7 @@ $color5:#ff5fa2;
 
                         p {
                             font-size: 10px;
-                            margin-left: 5px;
+
                         }
 
                     }

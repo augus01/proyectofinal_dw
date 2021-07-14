@@ -1,0 +1,694 @@
+/*VARS COLORS*/
+$color1:#fccfa6;
+$color2:#fdb3a5;
+$color3:#fe97a4;
+$color4:#fe7ba3;
+$color5:#ff5fa2;
+/*VARS COLORS*/
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.head {
+
+    .head__menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .logo {
+            height: 100px;
+        }
+
+        .menu-btn {
+            position: absolute;
+            right: 20px;
+            cursor: pointer;
+            display: none;
+        }
+    }
+
+
+    .menu__nav {
+
+        .menu__lista {
+            font-size: 20px;
+            list-style: none;
+            list-style-type: none;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+
+            li {
+                :hover {
+                    color: #fe97a4;
+                    border-radius: 15px;
+                    font-weight: bold;
+                    padding: 0 13px 0 13px;
+                }
+            }
+
+            .menu__link {
+                color: #000000;
+                text-decoration: none;
+                font-size: 17px;
+                padding: 0.5em;
+                word-spacing: 6.5em;
+                font-family: 'Playfair Display', serif;
+
+
+            }
+        }
+    }
+
+}
+
+
+/*INICIO SECTION*/
+
+main {
+    background-color: #ece8e1;
+
+    .titulo {
+        padding: 5%;
+        text-align: center;
+        font-family: 'Playfair Display', serif;
+        letter-spacing: 2px;
+        font-size: 3.8rem;
+        font-weight: 500px;
+        color: $color2;
+        text-transform: uppercase;
+    }
+
+}
+
+
+
+section {
+    border-left: 1px solid #ff5fa2;
+
+    .grillaPrincipal {
+        height: 3200px;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+        grid-template-areas: "titulogrilla miembro1"
+            "miembro2 ."
+            ". miembro3"
+            "miembro4 ."
+            ". miembro5"
+            "miembro6 ."
+            ". miembro7"
+            "miembro8 ."
+            ". miembro9";
+
+        #miembro1 {
+            grid-area: miembro1;
+
+        }
+
+        #miembro2 {
+            grid-area: miembro2;
+        }
+
+        #miembro3 {
+            grid-area: miembro3;
+        }
+
+        #miembro4 {
+            grid-area: miembro4;
+        }
+
+        #miembro5 {
+            grid-area: miembro5;
+        }
+
+        #miembro6 {
+            grid-area: miembro6;
+        }
+
+        #miembro7 {
+            grid-area: miembro7;
+        }
+
+        #miembro8 {
+            grid-area: miembro8;
+        }
+
+        #miembro9 {
+            grid-area: miembro9;
+        }
+
+        .grillaMiembrosD {
+            height: 10%;
+            display: grid;
+            grid-template-columns: auto 60%;
+            grid-template-areas: "infoMD fotoMD";
+
+            .fotoMD {
+                grid-area: fotoMD;
+                width: 100%;
+                margin: 0 5%;
+
+                img {
+                    height: 320px;
+                    margin-right: 5%;
+                }
+            }
+
+            .infoMD {
+                align-self: center;
+                margin-left: 5%;
+
+                h4 {
+                    text-align: center;
+                    font-family: 'Fredoka One', cursive;
+                }
+            }
+        }
+
+        .grillaMiembrosI {
+            height: 10%;
+            display: grid;
+            grid-template-columns: 60% auto;
+            grid-template-areas: "fotoMI infoMI";
+            align-items: center;
+            margin-left: 5%;
+
+            .fotoMI {
+                grid-area: fotoMI;
+                width: 258px;
+                justify-self: self-end;
+
+                img {
+                    height: 320px;
+
+                }
+            }
+
+        }
+
+    }
+}
+
+
+
+.infoMI h4 {
+    text-align: center;
+    font-family: 'Fredoka One', cursive;
+}
+
+.infoMI {
+
+    text-align: justify;
+}
+
+/*FIN SECTION*/
+
+.foot2 {
+    grid-area: foot2;
+    border-left: 1px solid white;
+
+    ul {
+        list-style: none;
+
+        li {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            a {
+                text-decoration: none;
+                color: white;
+                padding: 10%;
+            }
+
+            a:hover {
+                color: #000000;
+                border-radius: 15px;
+                font-weight: bold;
+                padding: 13px 0 13px 0;
+                transition: 0.41s;
+            }
+
+
+        }
+    }
+
+}
+
+
+
+
+
+
+
+
+/*FIN FOOTER*/
+
+/*RESPONSIVE TLFN*/
+@media only screen and (max-width:600px) {
+
+    /*INICIO SECTION*/
+
+    section {
+        background-color: #ece8e1;
+        border-left: 1px solid #ff5fa2;
+
+        .titulo {
+            font-size: 2.9rem;
+        }
+    }
+
+    .grillaPrincipal {
+        height: auto;
+        padding-bottom: 10%;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(9, 1fr);
+        grid-template-areas: "miembro1"
+            "miembro2 "
+            " miembro3"
+            "miembro4"
+            "miembro5"
+            "miembro6"
+            "miembro7"
+            "miembro8 "
+            "miembro9";
+
+        #miembro1 {
+            margin: 0px;
+        }
+
+        .grillaMiembrosI,
+        .grillaMiembrosD {
+            margin: 0;
+            height: auto;
+            display: grid;
+            grid-template-columns: auto;
+            grid-template-rows: auto auto;
+            grid-template-areas: "info"
+                "foto"
+            ;
+            justify-items: center;
+            
+
+            .foto {
+                grid-area: foto;
+                width: 70%;
+                margin: 0px;
+                justify-self: center;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    margin: 0;
+                }
+            }
+
+            .info {
+                grid-area: info;
+                font-size: .7em;
+                padding: 7% 7% 0 7%;
+                margin: 0;
+                justify-self: center;
+                text-align: center;
+                width: 85%;
+                h4{
+                    font-family: 'Fredoka One', cursive;
+                }
+    
+            }
+        }
+
+
+    }
+
+
+
+    /*FIN SECTION*/
+    .foot2 {
+        display: none;
+    }
+}
+/*RESPONSIVE TLFN*/
+
+
+/*RESPONSIVE TABLET*/
+@media only screen and (min-width:600px) {
+
+    /*INICIO SECTION*/
+
+    section {
+        background-color: #ece8e1;
+        border-left: 1px solid #ff5fa2;
+        padding-bottom: 100px;
+    }
+
+    .grillaPrincipal {
+        padding: 0 5% 5% 5%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto repeat(9, 1fr);
+        row-gap: 1%;
+        grid-template-areas:
+            "miembro1"
+            "miembro2 "
+            " miembro3"
+            "miembro4"
+            "miembro5"
+            "miembro6"
+            "miembro7"
+            "miembro8 "
+            "miembro9";
+
+        #miembro1 {
+            grid-area: miembro1;
+            margin-top: 0px;
+        }
+
+        #miembro2 {
+            grid-area: miembro2;
+        }
+
+        #miembro3 {
+            grid-area: miembro3;
+        }
+
+        #miembro4 {
+            grid-area: miembro4;
+        }
+
+        #miembro5 {
+            grid-area: miembro5;
+        }
+
+        #miembro6 {
+            grid-area: miembro6;
+        }
+
+        #miembro7 {
+            grid-area: miembro7;
+        }
+
+        #miembro8 {
+            grid-area: miembro8;
+        }
+
+        #miembro9 {
+            grid-area: miembro9;
+        }
+
+        .grillaMiembrosD {
+
+            margin-left: 0%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-areas: "infoMD fotoMD";
+
+            .fotoMD {
+                grid-area: fotoMD;
+                width: 90%;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            .infoMD {
+                grid-area: infoMD;
+                align-self: center;
+                width: 80%;
+                font-size: 17px;
+
+                h4 {
+                    text-align: center;
+                    font-family: 'Fredoka One', cursive;
+                }
+
+                p {
+                    font-size: .7em;
+                    text-align: justify;
+                }
+            }
+
+        }
+
+        .grillaMiembrosI {
+            margin-right: 0%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-areas: "fotoMI infoMI";
+            align-items: center;
+
+            .fotoMI {
+                grid-area: fotoMI;
+                width: 100%;
+
+                img {
+                    width: 80%;
+                    height: auto;
+
+                }
+            }
+
+            .infoMI {
+                grid-area: infoMI;
+                align-self: center;
+                width: 90%;
+                font-size: 17px;
+
+                h4 {
+                    text-align: center;
+                    font-family: 'Fredoka One', cursive;
+                }
+
+                p {
+                    font-size: .7em;
+                }
+            }
+        }
+    }
+
+    /*FIN SECTION*/
+}
+
+/*RESPONSIVE TABLET*/
+
+/*RESPONSIVE DESKTOP*/
+@media only screen and (min-width:900px) {
+
+    /*INICIO SECTION*/
+
+    section {
+        background-color: #ece8e1;
+        border-left: 1px solid #ff5fa2;
+    }
+
+    .grillaPrincipal {
+        padding-bottom: 20%;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+        row-gap: 80px;
+        grid-template-areas: "miembro1"
+            "miembro2"
+            "miembro3"
+            "miembro4"
+            "miembro5"
+            "miembro6"
+            "miembro7"
+            "miembro8"
+            "miembro9";
+
+        #miembro1 {
+            grid-area: miembro1;
+            margin-top: 0px;
+
+            .fotoMD {
+                background-color: #80caf1;
+            }
+        }
+
+        #miembro2 {
+            grid-area: miembro2;
+
+            .fotoMI {
+                background-color: #8cd776;
+            }
+
+        }
+
+        #miembro3 {
+            grid-area: miembro3;
+
+            .fotoMD {
+                background-color: #f8cfd7;
+            }
+
+        }
+
+        #miembro4 {
+            grid-area: miembro4;
+
+            .fotoMI {
+                background-color: #9c9ecf;
+            }
+        }
+
+        #miembro5 {
+            grid-area: miembro5;
+
+            .fotoMD {
+                background-color: #fac857;
+            }
+        }
+
+        #miembro6 {
+            grid-area: miembro6;
+
+            .fotoMI {
+                background-color: #6fc5c2;
+            }
+        }
+
+        #miembro7 {
+            grid-area: miembro7;
+
+            .fotoMD {
+                background-color: #ffffff;
+            }
+        }
+
+        #miembro8 {
+            grid-area: miembro8;
+
+            .fotoMI {
+                background-color: #e81933;
+            }
+
+        }
+
+        #miembro9 {
+            grid-area: miembro9;
+
+            .fotoMD {
+                background-color: #016cba;
+            }
+        }
+
+        .grillaMiembrosD {
+            margin: 0;
+            height: 100%;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-areas: "infoMD fotoMD";
+            justify-content: start;
+            justify-items: center;
+
+
+            .fotoMD {
+                grid-area: fotoMD;
+                width: auto;
+                justify-self: center;
+                height: 514px;
+
+
+                img {
+                    height: 514px;
+                    width: auto;
+                    margin-right: 5%;
+                    transition: .6s;
+                }
+            }
+
+            .infoMD {
+                grid-area: infoMD;
+                align-self: center;
+                padding: 0;
+                margin: 0 0px 0px 0%;
+                width: 357px;
+                font-size: 17px;
+
+                h4 {
+                    text-align: center;
+                    font-family: 'Fredoka One', cursive;
+                }
+                p{
+                    font-size: .8em;
+                }
+
+
+            }
+
+        }
+
+        .grillaMiembrosD:hover {
+
+            .fotoMD {
+                img {
+                    transform: translate(-20px, -15px);
+                    transition: 0.8s;
+                }
+            }
+        }
+
+        .grillaMiembrosI {
+            margin: 0;
+            height: 100%;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-areas: "fotoMI infoMI";
+            justify-content: start;
+            justify-items: center;
+
+            .fotoMI {
+                grid-area: fotoMI;
+                width: auto;
+                justify-self: center;
+                margin: 0px;
+
+                img {
+                    height: 500px;
+                    width: auto;
+                    margin: 0;
+                    transition: .6s;
+                }
+            }
+
+            .infoMI {
+                grid-area: infoMI;
+                align-self: center;
+                margin-right: 5%;
+                margin: 0 0px 0px 0%;
+                width: 357px;
+                font-size: 15px;
+
+                h4 {
+                    text-align: center;
+                    font-family: 'Fredoka One', cursive;
+                }
+                p{
+                    font-size: .9em;
+                }
+            }
+        }
+
+
+        .grillaMiembrosI:hover .fotoMI img {
+            transform: translate(20px, 15px);
+            transition: 0.8s;
+        }
+    }
+
+    /*FIN SECTION*/
+}
+
+/*RESPONSIVE DESKTOP*/

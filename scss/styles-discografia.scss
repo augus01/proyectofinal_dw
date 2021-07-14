@@ -40,13 +40,16 @@ $color5:#ff5fa2;
             list-style-type: none;
             display: flex;
             justify-content: end;
+            align-items: center;
 
             li {
+                transition: 0.9s;
                 :hover {
                     color: #fe97a4;
                     border-radius: 15px;
                     font-weight: bold;
                     padding: 0 13px 0 13px;
+                    ;
                 }
             }
 
@@ -65,7 +68,6 @@ $color5:#ff5fa2;
 
 }
 
-
 main {
     background-color: #ece8e1;
 
@@ -76,7 +78,7 @@ main {
         letter-spacing: 2px;
         font-size: 3.3rem;
         font-weight: 500;
-        color: #0f1923;
+        color: Scolor2;
         text-transform: uppercase;
     }
 }
@@ -141,18 +143,21 @@ main {
 }
 
 .footer {
-    padding: 1% 0 1%;
+    padding: 1% 0 5%;
     background-image: linear-gradient(to bottom, #fccfa6, #fdb3a5, #fe97a4, #fe7ba3, #ff5fa2);
     height: 100%;
     width: auto;
     display: grid;
     grid-template-columns: 30% 40% 30%;
     grid-template-rows: 50% 50%;
-    grid-template-areas:". foot1 foot2"
-                        ". info_footer foot2";
+    row-gap: 30px;
+    grid-template-areas: ". foot1 foot2"
+        ". info_footer foot2";
+    justify-content: start;
     justify-items: center;
-    align-items: center;
-    #logoPP{
+
+
+    #logoPP {
         width: 80px;
     }
 
@@ -160,10 +165,12 @@ main {
     .footer__caja {
         grid-area: foot1;
         text-align: center;
-        width: 18%;
-        #logoPP{
+        width: 100%;
+
+        #logoPP {
             width: 80px;
-            
+            height: auto;
+
         }
 
         img {
@@ -171,32 +178,31 @@ main {
         }
 
         .caja__icons {
-                display: flex;
-                justify-content: space-between;
-                padding: 10% 0 0 0;
-                
-                a {
+            padding: 10%;
+
+
+            a {
+                text-align: center;
+                color: black;
+                transition: 0.6s;
+
+                i {
                     text-align: center;
-                    color: black;
+                    margin: 5px;
+                    width: 20px;
 
-                    i {
-                        text-align: center;
-                        margin: 5px;
-                        width: 20px;
-                        
-                    }
                 }
-            
-            
-
-                a:hover{
-                    color: #ffffff;
-                    transform: rotate(360deg);
-                    transition: 0.6s;
-                }
-                
+            }
 
 
+        }
+        a:hover{
+ 
+                color: #ffffff;
+                padding: 15px;
+                transform: rotate(360deg);
+                transition: 0.6s;
+ 
         }
 
     }
@@ -221,22 +227,25 @@ main {
         }
     }
 
-    .foot2{
+    .foot2 {
         grid-area: foot2;
         border-left: 1px solid white;
-        ul{
+
+        ul {
             list-style: none;
-            
-            li{
+
+            li {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
-                a{
+
+                a {
                     text-decoration: none;
                     color: white;
                     padding: 10%;
-                    
+
                 }
+
                 :hover {
                     color: #000000;
                     border-radius: 15px;
@@ -247,16 +256,7 @@ main {
             }
         }
     }
-    
-    
-    
-    
-    
 
-    
-    
-    
-    
 }
 
 /*FIN FOOTER*/
@@ -314,14 +314,14 @@ main {
 
     .contenedor {
         background-color: #ece8e1;
-    
+
         .titulo {
             font-size: 2.6rem;
         }
-        }
+    }
 
     .discografia {
-        
+
         width: 100%;
         display: flex;
         justify-content: center;
@@ -364,7 +364,8 @@ main {
                 }
 
                 .disco__iframe {
-                    width: 90%;
+                    width: 85%;
+                    height: 190px;
                     margin: 3% 0;
 
                 }
@@ -390,7 +391,7 @@ main {
                 .menu__lista {
                     font-size: 30px;
                     display: flex;
-                    justify-content: end;
+                    justify-content: flex-end;
                     width: 60px;
 
                     li :hover {
@@ -528,16 +529,16 @@ main {
                 }
 
                 .disco__iframe {
-                    
+
                     width: 40%;
                     margin: 3%;
 
                 }
 
-                
+
             }
         }
     }
 
-    
+
 }

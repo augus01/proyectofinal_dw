@@ -1,5 +1,401 @@
 @charset "UTF-8";
-/*-----------------INICIA NOTICIAS---------------------*/
+/*-----------------INICIA MIEMBROS--------------------*/
+/*VARS COLORS*/
+/*VARS COLORS*/
+* {
+  margin: 0px;
+  padding: 0px; }
+
+.head .head__menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .head .head__menu .logo {
+    height: 100px; }
+  .head .head__menu .menu-btn {
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+    display: none; }
+
+.head .menu__nav .menu__lista {
+  font-size: 20px;
+  list-style: none;
+  list-style-type: none;
+  display: flex;
+  justify-content: end;
+  align-items: center; }
+  .head .menu__nav .menu__lista li :hover {
+    color: #fe97a4;
+    border-radius: 15px;
+    font-weight: bold;
+    padding: 0 13px 0 13px; }
+  .head .menu__nav .menu__lista .menu__link {
+    color: #000000;
+    text-decoration: none;
+    font-size: 17px;
+    padding: 0.5em;
+    word-spacing: 6.5em;
+    font-family: 'Playfair Display', serif; }
+
+/*INICIO SECTION*/
+main {
+  background-color: #ece8e1; }
+  main .titulo {
+    padding: 5%;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 2px;
+    font-size: 3.8rem;
+    font-weight: 500px;
+    color: #fdb3a5;
+    text-transform: uppercase; }
+
+section {
+  border-left: 1px solid #ff5fa2; }
+  section .grillaPrincipal {
+    height: 3200px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    grid-template-areas: "titulogrilla miembro1" "miembro2 ." ". miembro3" "miembro4 ." ". miembro5" "miembro6 ." ". miembro7" "miembro8 ." ". miembro9"; }
+    section .grillaPrincipal #miembro1 {
+      grid-area: miembro1; }
+    section .grillaPrincipal #miembro2 {
+      grid-area: miembro2; }
+    section .grillaPrincipal #miembro3 {
+      grid-area: miembro3; }
+    section .grillaPrincipal #miembro4 {
+      grid-area: miembro4; }
+    section .grillaPrincipal #miembro5 {
+      grid-area: miembro5; }
+    section .grillaPrincipal #miembro6 {
+      grid-area: miembro6; }
+    section .grillaPrincipal #miembro7 {
+      grid-area: miembro7; }
+    section .grillaPrincipal #miembro8 {
+      grid-area: miembro8; }
+    section .grillaPrincipal #miembro9 {
+      grid-area: miembro9; }
+    section .grillaPrincipal .grillaMiembrosD {
+      height: 10%;
+      display: grid;
+      grid-template-columns: auto 60%;
+      grid-template-areas: "infoMD fotoMD"; }
+      section .grillaPrincipal .grillaMiembrosD .fotoMD {
+        grid-area: fotoMD;
+        width: 100%;
+        margin: 0 5%; }
+        section .grillaPrincipal .grillaMiembrosD .fotoMD img {
+          height: 320px;
+          margin-right: 5%; }
+      section .grillaPrincipal .grillaMiembrosD .infoMD {
+        align-self: center;
+        margin-left: 5%; }
+        section .grillaPrincipal .grillaMiembrosD .infoMD h4 {
+          text-align: center;
+          font-family: 'Fredoka One', cursive; }
+    section .grillaPrincipal .grillaMiembrosI {
+      height: 10%;
+      display: grid;
+      grid-template-columns: 60% auto;
+      grid-template-areas: "fotoMI infoMI";
+      align-items: center;
+      margin-left: 5%; }
+      section .grillaPrincipal .grillaMiembrosI .fotoMI {
+        grid-area: fotoMI;
+        width: 258px;
+        justify-self: self-end; }
+        section .grillaPrincipal .grillaMiembrosI .fotoMI img {
+          height: 320px; }
+
+.infoMI h4 {
+  text-align: center;
+  font-family: 'Fredoka One', cursive; }
+
+.infoMI {
+  text-align: justify; }
+
+/*FIN SECTION*/
+.foot2 {
+  grid-area: foot2;
+  border-left: 1px solid white; }
+  .foot2 ul {
+    list-style: none; }
+    .foot2 ul li {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
+      .foot2 ul li a {
+        text-decoration: none;
+        color: white;
+        padding: 10%; }
+      .foot2 ul li a:hover {
+        color: #000000;
+        border-radius: 15px;
+        font-weight: bold;
+        padding: 13px 0 13px 0;
+        transition: 0.41s; }
+
+/*FIN FOOTER*/
+/*RESPONSIVE TLFN*/
+@media only screen and (max-width: 600px) {
+  /*INICIO SECTION*/
+  section {
+    background-color: #ece8e1;
+    border-left: 1px solid #ff5fa2; }
+    section .titulo {
+      font-size: 2.9rem; }
+  .grillaPrincipal {
+    height: auto;
+    padding-bottom: 10%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(9, 1fr);
+    grid-template-areas: "miembro1" "miembro2 " " miembro3" "miembro4" "miembro5" "miembro6" "miembro7" "miembro8 " "miembro9"; }
+    .grillaPrincipal #miembro1 {
+      margin: 0px; }
+    .grillaPrincipal .grillaMiembrosI,
+    .grillaPrincipal .grillaMiembrosD {
+      margin: 0;
+      height: auto;
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: auto auto;
+      grid-template-areas: "info" "foto";
+      justify-items: center; }
+      .grillaPrincipal .grillaMiembrosI .foto,
+      .grillaPrincipal .grillaMiembrosD .foto {
+        grid-area: foto;
+        width: 70%;
+        margin: 0px;
+        justify-self: center; }
+        .grillaPrincipal .grillaMiembrosI .foto img,
+        .grillaPrincipal .grillaMiembrosD .foto img {
+          width: 100%;
+          height: auto;
+          margin: 0; }
+      .grillaPrincipal .grillaMiembrosI .info,
+      .grillaPrincipal .grillaMiembrosD .info {
+        grid-area: info;
+        font-size: .7em;
+        padding: 7% 7% 0 7%;
+        margin: 0;
+        justify-self: center;
+        text-align: center;
+        width: 85%; }
+        .grillaPrincipal .grillaMiembrosI .info h4,
+        .grillaPrincipal .grillaMiembrosD .info h4 {
+          font-family: 'Fredoka One', cursive; }
+  /*FIN SECTION*/
+  .foot2 {
+    display: none; } }
+
+/*RESPONSIVE TLFN*/
+/*RESPONSIVE TABLET*/
+@media only screen and (min-width: 600px) {
+  /*INICIO SECTION*/
+  section {
+    background-color: #ece8e1;
+    border-left: 1px solid #ff5fa2;
+    padding-bottom: 100px; }
+  .grillaPrincipal {
+    padding: 0 5% 5% 5%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto repeat(9, 1fr);
+    row-gap: 1%;
+    grid-template-areas: "miembro1" "miembro2 " " miembro3" "miembro4" "miembro5" "miembro6" "miembro7" "miembro8 " "miembro9"; }
+    .grillaPrincipal #miembro1 {
+      grid-area: miembro1;
+      margin-top: 0px; }
+    .grillaPrincipal #miembro2 {
+      grid-area: miembro2; }
+    .grillaPrincipal #miembro3 {
+      grid-area: miembro3; }
+    .grillaPrincipal #miembro4 {
+      grid-area: miembro4; }
+    .grillaPrincipal #miembro5 {
+      grid-area: miembro5; }
+    .grillaPrincipal #miembro6 {
+      grid-area: miembro6; }
+    .grillaPrincipal #miembro7 {
+      grid-area: miembro7; }
+    .grillaPrincipal #miembro8 {
+      grid-area: miembro8; }
+    .grillaPrincipal #miembro9 {
+      grid-area: miembro9; }
+    .grillaPrincipal .grillaMiembrosD {
+      margin-left: 0%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-template-areas: "infoMD fotoMD"; }
+      .grillaPrincipal .grillaMiembrosD .fotoMD {
+        grid-area: fotoMD;
+        width: 90%; }
+        .grillaPrincipal .grillaMiembrosD .fotoMD img {
+          width: 100%;
+          height: auto; }
+      .grillaPrincipal .grillaMiembrosD .infoMD {
+        grid-area: infoMD;
+        align-self: center;
+        width: 80%;
+        font-size: 17px; }
+        .grillaPrincipal .grillaMiembrosD .infoMD h4 {
+          text-align: center;
+          font-family: 'Fredoka One', cursive; }
+        .grillaPrincipal .grillaMiembrosD .infoMD p {
+          font-size: .7em;
+          text-align: justify; }
+    .grillaPrincipal .grillaMiembrosI {
+      margin-right: 0%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-template-areas: "fotoMI infoMI";
+      align-items: center; }
+      .grillaPrincipal .grillaMiembrosI .fotoMI {
+        grid-area: fotoMI;
+        width: 100%; }
+        .grillaPrincipal .grillaMiembrosI .fotoMI img {
+          width: 80%;
+          height: auto; }
+      .grillaPrincipal .grillaMiembrosI .infoMI {
+        grid-area: infoMI;
+        align-self: center;
+        width: 90%;
+        font-size: 17px; }
+        .grillaPrincipal .grillaMiembrosI .infoMI h4 {
+          text-align: center;
+          font-family: 'Fredoka One', cursive; }
+        .grillaPrincipal .grillaMiembrosI .infoMI p {
+          font-size: .7em; }
+  /*FIN SECTION*/ }
+
+/*RESPONSIVE TABLET*/
+/*RESPONSIVE DESKTOP*/
+@media only screen and (min-width: 900px) {
+  /*INICIO SECTION*/
+  section {
+    background-color: #ece8e1;
+    border-left: 1px solid #ff5fa2; }
+  .grillaPrincipal {
+    padding-bottom: 20%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    row-gap: 80px;
+    grid-template-areas: "miembro1" "miembro2" "miembro3" "miembro4" "miembro5" "miembro6" "miembro7" "miembro8" "miembro9"; }
+    .grillaPrincipal #miembro1 {
+      grid-area: miembro1;
+      margin-top: 0px; }
+      .grillaPrincipal #miembro1 .fotoMD {
+        background-color: #80caf1; }
+    .grillaPrincipal #miembro2 {
+      grid-area: miembro2; }
+      .grillaPrincipal #miembro2 .fotoMI {
+        background-color: #8cd776; }
+    .grillaPrincipal #miembro3 {
+      grid-area: miembro3; }
+      .grillaPrincipal #miembro3 .fotoMD {
+        background-color: #f8cfd7; }
+    .grillaPrincipal #miembro4 {
+      grid-area: miembro4; }
+      .grillaPrincipal #miembro4 .fotoMI {
+        background-color: #9c9ecf; }
+    .grillaPrincipal #miembro5 {
+      grid-area: miembro5; }
+      .grillaPrincipal #miembro5 .fotoMD {
+        background-color: #fac857; }
+    .grillaPrincipal #miembro6 {
+      grid-area: miembro6; }
+      .grillaPrincipal #miembro6 .fotoMI {
+        background-color: #6fc5c2; }
+    .grillaPrincipal #miembro7 {
+      grid-area: miembro7; }
+      .grillaPrincipal #miembro7 .fotoMD {
+        background-color: #ffffff; }
+    .grillaPrincipal #miembro8 {
+      grid-area: miembro8; }
+      .grillaPrincipal #miembro8 .fotoMI {
+        background-color: #e81933; }
+    .grillaPrincipal #miembro9 {
+      grid-area: miembro9; }
+      .grillaPrincipal #miembro9 .fotoMD {
+        background-color: #016cba; }
+    .grillaPrincipal .grillaMiembrosD {
+      margin: 0;
+      height: 100%;
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-template-areas: "infoMD fotoMD";
+      justify-content: start;
+      justify-items: center; }
+      .grillaPrincipal .grillaMiembrosD .fotoMD {
+        grid-area: fotoMD;
+        width: auto;
+        justify-self: center;
+        height: 514px; }
+        .grillaPrincipal .grillaMiembrosD .fotoMD img {
+          height: 514px;
+          width: auto;
+          margin-right: 5%;
+          transition: .6s; }
+      .grillaPrincipal .grillaMiembrosD .infoMD {
+        grid-area: infoMD;
+        align-self: center;
+        padding: 0;
+        margin: 0 0px 0px 0%;
+        width: 357px;
+        font-size: 17px; }
+        .grillaPrincipal .grillaMiembrosD .infoMD h4 {
+          text-align: center;
+          font-family: 'Fredoka One', cursive; }
+        .grillaPrincipal .grillaMiembrosD .infoMD p {
+          font-size: .8em; }
+    .grillaPrincipal .grillaMiembrosD:hover .fotoMD img {
+      transform: translate(-20px, -15px);
+      transition: 0.8s; }
+    .grillaPrincipal .grillaMiembrosI {
+      margin: 0;
+      height: 100%;
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-template-areas: "fotoMI infoMI";
+      justify-content: start;
+      justify-items: center; }
+      .grillaPrincipal .grillaMiembrosI .fotoMI {
+        grid-area: fotoMI;
+        width: auto;
+        justify-self: center;
+        margin: 0px; }
+        .grillaPrincipal .grillaMiembrosI .fotoMI img {
+          height: 500px;
+          width: auto;
+          margin: 0;
+          transition: .6s; }
+      .grillaPrincipal .grillaMiembrosI .infoMI {
+        grid-area: infoMI;
+        align-self: center;
+        margin-right: 5%;
+        margin: 0 0px 0px 0%;
+        width: 357px;
+        font-size: 15px; }
+        .grillaPrincipal .grillaMiembrosI .infoMI h4 {
+          text-align: center;
+          font-family: 'Fredoka One', cursive; }
+        .grillaPrincipal .grillaMiembrosI .infoMI p {
+          font-size: .9em; }
+    .grillaPrincipal .grillaMiembrosI:hover .fotoMI img {
+      transform: translate(20px, 15px);
+      transition: 0.8s; }
+  /*FIN SECTION*/ }
+
+/*RESPONSIVE DESKTOP*/
+/*-----------------ACABA MIEMBROS---------------------*/
+/*-----------------INICIA NOTICIAS--------------------*/
 /*VARS COLORS*/
 /*VARS COLORS*/
 * {
@@ -61,7 +457,8 @@
       grid-area: noticia1;
       height: 60%; }
     .contenedor .grid #noticia2 {
-      grid-area: noticia2; }
+      grid-area: noticia2;
+      height: 85%; }
     .contenedor .grid #noticia3 {
       grid-area: noticia3;
       height: 60%; }
@@ -98,10 +495,12 @@
         text-align: left;
         padding: 0px 15px 0 15px; }
         .contenedor .grid .grid__noticias .noticias__card .card__infonews time {
+          color: #ff5fa2;
+          font-weight: bold;
+          font-family: initial;
           margin-bottom: 20px;
-          opacity: .9;
-          font-family: serif; }
-        .contenedor .grid .grid__noticias .noticias__card .card__infonews p p {
+          opacity: .9; }
+        .contenedor .grid .grid__noticias .noticias__card .card__infonews p {
           font-size: .8em; }
 
 /*INICIO FOOTER*/
@@ -233,8 +632,7 @@
               font-family: initial;
               align-self: flex-start; }
             .contenedor .grid .grid__noticias .noticias__card .card__infonews p {
-              font-size: 10px;
-              margin-left: 5px; }
+              font-size: 10px; }
   .titulo {
     font-size: 25px; } }
 
@@ -408,7 +806,7 @@
 
 /*DESKTOP*/
 /*-----------------ACABA NOTICIAS---------------------*/
-/*-----------------INICIA TIENDA---------------------*/
+/*-----------------INICIA TIENDA----------------------*/
 /*OPERADORES*/
 /*OPERADORES*/
 * {
@@ -419,7 +817,7 @@
 .head .head__menu {
   display: flex;
   align-items: center;
-  justify-content: space-between; }
+  justify-content: space-around; }
   .head .head__menu .logo {
     height: 100px; }
   .head .head__menu .menu-btn {
@@ -449,6 +847,9 @@
 
 /*Fin Header*/
 /*Inicio Section*/
+main {
+  padding-bottom: 25%; }
+
 .contenedor {
   background-color: #ece8e1; }
   .contenedor .contenedor__titulo, .contenedor .contenedor__producto .contenedor__cardproducto h5 {
@@ -490,6 +891,8 @@
       .contenedor .contenedor__producto .contenedor__cardproducto h5 {
         font-weight: 600;
         color: #000; }
+      .contenedor .contenedor__producto .contenedor__cardproducto p {
+        font-weight: 600; }
       .contenedor .contenedor__producto .contenedor__cardproducto .cardproducto__img {
         margin-bottom: 20px; }
         .contenedor .contenedor__producto .contenedor__cardproducto .cardproducto__img :hover {
@@ -591,6 +994,8 @@
       grid-area: producto6; }
     .contenedor .contenedor__producto #producto7 {
       grid-area: producto7; }
+      .contenedor .contenedor__producto #producto7 img {
+        width: 40%; }
     .contenedor .contenedor__producto .contenedor__cardproducto {
       justify-self: center;
       margin: 0;
@@ -700,7 +1105,7 @@
     margin: 30px 0 0 0;
     display: grid;
     grid-template-columns: repeat(3 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     grid-template-areas: "producto1 producto2 producto3" "producto4 producto5 producto6" ". producto7 ."; }
     .contenedor .contenedor__producto #producto1 {
       grid-area: producto1; }
@@ -737,8 +1142,8 @@
           transform: scale(1.05); }
   /*Fin Section*/ }
 
-/*-----------------ACABA TIENDA---------------------*/
-/*-----------------INICIA DISCOGRAFÍA---------------------*/
+/*-----------------ACABA TIENDA-----------------------*/
+/*-----------------INICIA DISCOGRAFÍA-----------------*/
 /*VARS COLORS*/
 /*VARS COLORS*/
 * {
@@ -762,12 +1167,15 @@
   list-style: none;
   list-style-type: none;
   display: flex;
-  justify-content: end; }
-  .head .menu__nav .menu__lista li :hover {
-    color: #fe97a4;
-    border-radius: 15px;
-    font-weight: bold;
-    padding: 0 13px 0 13px; }
+  justify-content: end;
+  align-items: center; }
+  .head .menu__nav .menu__lista li {
+    transition: 0.9s; }
+    .head .menu__nav .menu__lista li :hover {
+      color: #fe97a4;
+      border-radius: 15px;
+      font-weight: bold;
+      padding: 0 13px 0 13px; }
   .head .menu__nav .menu__lista .menu__link {
     color: #000000;
     text-decoration: none;
@@ -785,7 +1193,7 @@ main {
     letter-spacing: 2px;
     font-size: 3.3rem;
     font-weight: 500;
-    color: #0f1923;
+    color: Scolor2;
     text-transform: uppercase; }
 
 .titulo--2 {
@@ -826,41 +1234,43 @@ main {
         margin: 3%; }
 
 .footer {
-  padding: 1% 0 1%;
+  padding: 1% 0 5%;
   background-image: linear-gradient(to bottom, #fccfa6, #fdb3a5, #fe97a4, #fe7ba3, #ff5fa2);
   height: 100%;
   width: auto;
   display: grid;
   grid-template-columns: 30% 40% 30%;
   grid-template-rows: 50% 50%;
+  row-gap: 30px;
   grid-template-areas: ". foot1 foot2" ". info_footer foot2";
-  justify-items: center;
-  align-items: center; }
+  justify-content: start;
+  justify-items: center; }
   .footer #logoPP {
     width: 80px; }
   .footer .footer__caja {
     grid-area: foot1;
     text-align: center;
-    width: 18%; }
+    width: 100%; }
     .footer .footer__caja #logoPP {
-      width: 80px; }
+      width: 80px;
+      height: auto; }
     .footer .footer__caja img {
       height: 100px; }
     .footer .footer__caja .caja__icons {
-      display: flex;
-      justify-content: space-between;
-      padding: 10% 0 0 0; }
+      padding: 10%; }
       .footer .footer__caja .caja__icons a {
         text-align: center;
-        color: black; }
+        color: black;
+        transition: 0.6s; }
         .footer .footer__caja .caja__icons a i {
           text-align: center;
           margin: 5px;
           width: 20px; }
-      .footer .footer__caja .caja__icons a:hover {
-        color: #ffffff;
-        transform: rotate(360deg);
-        transition: 0.6s; }
+    .footer .footer__caja a:hover {
+      color: #ffffff;
+      padding: 15px;
+      transform: rotate(360deg);
+      transition: 0.6s; }
   .footer .info_footer {
     grid-area: info_footer;
     text-align: center; }
@@ -950,7 +1360,8 @@ main {
           .discografia .discografia__caja .caja__disco .disco__img img {
             width: 100%; }
         .discografia .discografia__caja .caja__disco .disco__iframe {
-          width: 90%;
+          width: 85%;
+          height: 190px;
           margin: 3% 0; } }
 
 @media only screen and (min-width: 600px) {
@@ -959,7 +1370,7 @@ main {
   .head .head__menu .menu__nav .menu__lista {
     font-size: 30px;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     width: 60px; }
     .head .head__menu .menu__nav .menu__lista li :hover {
       color: #fe97a4;
@@ -1039,4 +1450,4 @@ main {
           width: 40%;
           margin: 3%; } }
 
-/*-----------------ACABA DISCOGRAFÍA---------------------*/
+/*-----------------ACABA DISCOGRAFÍA------------------*/
