@@ -79,7 +79,7 @@ $color5:#ff5fa2;
 
 /*Inicio Section*/
 main{
-    padding-bottom: 25%;
+    padding-bottom: 2%;
 }
 .contenedor {
     background-color: #ece8e1;
@@ -103,8 +103,8 @@ main{
         grid-template-columns: 33% 33% 33%;
         grid-template-rows: repeat(4, 1fr);
         grid-template-areas: "producto1 producto2 producto3"
-            "producto4 producto5 producto6"
-            ". producto7 .";
+                            "producto4 producto5 producto6"
+                            ". producto7 .";
         justify-items: center;
 
         #producto1 {
@@ -145,7 +145,7 @@ main{
             h5 {
                 @extend .contenedor__titulo;
                 font-weight: 600;
-                color: #000;
+                color: $color2;
             }
             p{
                 font-weight: 600;
@@ -347,6 +347,7 @@ main{
 
             #producto6 {
                 grid-area: producto6;
+                
             }
 
             #producto7 {
@@ -361,12 +362,14 @@ main{
                 margin: 0;
                 text-transform: uppercase;
                 transition: 1s;
+                height: 100%;
 
 
                 h5 {
                     font-weight: 600;
                     font-size: 0.7em;
                     margin: 15px 0 10px 0;
+                    color: $color2;
                 }
 
                 p {
@@ -627,15 +630,15 @@ main{
                 .cardproducto__img {
                     margin-bottom: 20px;
                     width: 100%;
-
                     img {
                         @include tamano(100%, auto);
+                        transition: 0.4s;
 
                     }
 
                     :hover {
-                        transition: 1s;
-                        transform: scale(1.05);
+                        transition: 0.4s;
+                        transform: scale(.95);
                     }
                 }
             }

@@ -1,36 +1,39 @@
-*{
-    margin: 0
-    ;
+* {
+    margin: 0;
     padding: 0;
 }
+
 /*Fin Header*/
-header{
+header {
     height: 760px;
 }
 
-.logo{
+.logo {
     height: 100px;
 }
-.head{
+
+.head {
     background: url("../img/twice-alcohol-free-all-members-4k-wallpaper-3840x2160-uhdpaper.com-411.0_a.jpg");
     background-size: cover;
     height: 100%;
     width: 100%;
 }
 
-.menu_nav{
+.menu_nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
+
 }
-.menu-btn{
+
+.menu-btn {
     position: absolute;
     right: 20px;
     cursor: pointer;
     display: none;
 }
-.menu ul{
+
+.menu ul {
     font-size: 20px;
     list-style: none;
     list-style-type: none;
@@ -38,7 +41,7 @@ header{
     justify-content: end;
 }
 
-.menu ul li a{
+.menu ul li a {
     color: #ffffff;
     text-decoration: none;
     font-size: 17px;
@@ -50,15 +53,16 @@ header{
 /*Fin Header*/
 
 /*Inicio Section*/
-section{
+section {
     background-color: #ece8e1;
     padding-bottom: 70px;
 }
 
-hr{
-    color:#fccfa6;
+hr {
+    color: #fccfa6;
 }
-.titulo{
+
+.titulo {
     font-size: 2.8rem;
     color: #fdb3a5;
     padding: 5%;
@@ -69,21 +73,24 @@ hr{
     text-transform: uppercase;
 }
 
-.carrusel_noticias{
+.carrusel_noticias {
     margin: 0.5%;
     display: flex;
     justify-content: space-around;
 }
-.card_noticias{
+
+.card_noticias {
     height: 300px;
     width: 80%;
 
 }
-.card_noticias  img{
+
+.card_noticias img {
     height: 300px;
     width: auto;
 
 }
+
 .infoNews {
     margin: 0 15px;
     font-family: 'IBM Plex Sans', serif;
@@ -91,63 +98,69 @@ hr{
     width: auto;
 }
 
-.infoNews time{
+.infoNews time {
     color: #ff5fa2;
     font-weight: bold;
     font-family: initial;
 }
 
-.infoNews p{
+.infoNews p {
     margin: 15px 0;
 }
 
 
-.carrusel_fotos{
+.carrusel_fotos {
     margin: 0.5%;
     display: flex;
     justify-content: space-around;
 }
 
-.card_fotos{
+.card_fotos {
     height: auto;
     width: 25%;
 
 }
-.card_fotos img{
+
+.card_fotos img {
     height: auto;
     width: 80%;
 }
-#doble{
+
+#doble {
     margin-top: 0px;
 }
 
-.verMas{
+.verMas {
     font-family: 'IBM Plex Sans', serif;
-    margin: 50px 0 25px 0; 
+    margin: 50px 0 25px 0;
 }
 
-.verMas__lista{
+.verMas__lista {
     display: flex;
     justify-content: center;
-    
+
 }
-.verMas__item{
+
+.verMas__item {
     padding: 5px;
 }
-.verMas__item a{
+
+.verMas__item a {
     padding: 0;
     color: #fe97a4;
     text-decoration: none;
-    
+
 }
-.verMas__item :hover{
-    
+
+.verMas__item :hover {
+
     transition: 1s;
 }
-.verMas__lista .verMas__item :hover{
+
+.verMas__lista .verMas__item :hover {
     color: #fccfa6;
     padding: 0 50px;
-    
+
 }
 
 
@@ -164,8 +177,8 @@ hr{
     display: grid;
     grid-template-columns: 30% 40% 30%;
     grid-template-rows: 50% 50%;
-    grid-template-areas:". foot1 foot2"
-                        ". info_footer foot2";
+    grid-template-areas: ". foot1 foot2"
+        ". info_footer foot2";
     justify-items: center;
     align-items: center;
 }
@@ -176,6 +189,7 @@ hr{
     justify-items: center;
     text-align: center;
 }
+
 #logoPP {
     width: 80px;
     height: auto;
@@ -197,7 +211,7 @@ hr{
     margin: 0;
 }
 
-.icons a{
+.icons a {
     color: #000000;
 }
 
@@ -205,30 +219,33 @@ hr{
     display: flex;
     justify-content: space-between;
     padding: 10% 0 0 0;
-    
+
 }
 
-.icons a:hover{
+.icons a:hover {
     color: #ffffff;
     transform: rotate(360deg);
     transition: 1s;
 }
 
 
-.foot2{
+.foot2 {
     grid-area: foot2;
     border-left: 1px solid white;
 }
-.foot2 ul{
+
+.foot2 ul {
     list-style: none;
-    
+
 }
-.foot2 ul li{
+
+.foot2 ul li {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-.foot2 ul a{
+
+.foot2 ul a {
     text-decoration: none;
     color: white;
     padding: 10%;
@@ -247,23 +264,24 @@ hr{
 
 /*INICIO TLFN*/
 @media only screen and (max-width:600px) {
+
     /*Fin Header*/
-    header{
-        height:205px;
+    header {
+        height: 205px;
     }
 
-    .head .logo{
+    .head .logo {
         height: 50px;
     }
-    
-    .menu-btn{
+
+    .menu-btn {
         display: block;
         color: white;
     }
 
-    
 
-    .menu ul{
+
+    .menu ul {
         height: 100%;
         display: block;
         position: absolute;
@@ -275,39 +293,45 @@ hr{
         transform: translateX(-600px);
         transition: transform .5s ease-in-out;
     }
-    
-    .menu ul.nav-menu.show{
+
+    .menu ul.nav-menu.show {
         transform: translateX(0px);
     }
 
     .menu ul li {
-        
-        padding:10px ;
+
+        padding: 10px;
     }
-    
+
     /*Fin Header*/
 
     /*Inicio Section*/
 
 
-    .titulo{
-
+    .titulo {
         font-size: 30px;
-        margin: 0 ;
+        margin: 0;
 
     }
-    #titulo2{
+
+    #titulo1 {
+        font-size: 2.3rem;
+    }
+
+    #titulo2 {
+        font-size: 2.3rem;
         margin: 0 10px 25px;
     }
-    .carrusel_noticias{
+
+    .carrusel_noticias {
         height: auto;
         display: flex;
         flex-wrap: wrap;
-        align-items:flex-start;
-        
+        align-items: flex-start;
+
     }
-    
-    .card_noticias{
+
+    .card_noticias {
         height: 100%;
         width: 80%;
         margin-top: 10px;
@@ -316,7 +340,8 @@ hr{
         padding: 15px;
         margin-top: 50px;
     }
-    .card_noticias  img{
+
+    .card_noticias img {
         width: 100%;
         height: auto;
     }
@@ -328,14 +353,14 @@ hr{
         font-size: 13px;
     }
 
-    .infoNews p{
+    .infoNews p {
         margin: 15px 0;
         font-size: 14px;
     }
 
 
-    
-    .carrusel_fotos{
+
+    .carrusel_fotos {
         margin: 2%;
         display: flex;
         flex-direction: column;
@@ -343,23 +368,25 @@ hr{
         height: 100%;
     }
 
-    .card_fotos{
+    .card_fotos {
         height: auto;
         width: 60%;
-        
+
     }
-    .card_fotos img{
+
+    .card_fotos img {
         height: auto;
         width: 90%;
-        
+
     }
-    
-    #img2{
+
+    #img2 {
         position: relative;
         left: 30px;
         margin-top: 5px;
     }
-    #doble {  
+
+    #doble {
         display: none;
     }
 
@@ -368,52 +395,53 @@ hr{
     /*FIN SECTION*/
     /*INICIO FOOTER*/
 
-    
-    #logoPP{
+
+    #logoPP {
         width: 80px;
         height: auto;
     }
 
-    .info_footer p{
-        color: #ffffff;
-        margin: 0;
-        font-size: 13px;
+    .foot2 {
+        border-left: 0px solid;
     }
-    
+
 
 
     /*FIN FOOTER*/
 }
+
 /*FIN TLFN*/
 
-@media only screen and (min-width:600px){
-    *{
+@media only screen and (min-width:600px) {
+    * {
         margin: 0;
         padding: 0;
     }
+
     /*Fin Header*/
-    header{
+    header {
         height: 385px;
     }
-    
-    .logo{
+
+    .logo {
         height: 100px;
     }
-    .head{
+
+    .head {
         background-image: url("../img/twice-alcohol-free-all-members-4k-wallpaper-3840x2160-uhdpaper.com-411.0_a.jpg");
         background-size: cover;
-        width: auto ;
+        width: auto;
     }
-    
-    .menu-btn{
+
+    .menu-btn {
         display: block;
         color: white;
         font-size: 20px;
     }
 
-    
 
-    .menu ul{
+
+    .menu ul {
         display: block;
         position: absolute;
         top: 0;
@@ -425,36 +453,38 @@ hr{
         transform: translateX(-600px);
         transition: transform .5s ease-in-out;
     }
-    
-    .menu ul.nav-menu.show{
+
+    .menu ul.nav-menu.show {
         transform: translateX(0px);
     }
 
     .menu ul li {
         color: #fe97a4;
-        padding:10px ;
+        padding: 10px;
     }
-    .menu ul li a{
+
+    .menu ul li a {
         font-size: 18px;
     }
-    
+
     /*Fin Header*/
-    
+
     /*Inicio Section*/
 
-    
-    #titulo2{
-        margin: 25px 0 25px 0  ;
+
+    #titulo2 {
+        margin: 25px 0 25px 0;
     }
-    
-    .carrusel_noticias{
-        margin: 0.5%;
+
+    .carrusel_noticias {
+        margin: 0;
         width: 100%;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
     }
-    .card_noticias{
+
+    .card_noticias {
         width: 43%;
         height: 100%;
         padding: 15px;
@@ -463,7 +493,8 @@ hr{
         border-radius: 5%;
 
     }
-    .card_noticias  img{
+
+    .card_noticias img {
         height: auto;
         width: 100%;
     }
@@ -474,74 +505,80 @@ hr{
         font-size: 14px;
         width: auto;
     }
-    
-    #noticia3{
+
+    #noticia3 {
         margin-top: 65px;
     }
-    .carrusel_fotos{
-        margin: 0.5%;
+
+    .carrusel_fotos {
+        margin: 0;
         width: 100%;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
     }
-    
-    .card_fotos{
+
+    .card_fotos {
         width: 50%;
         text-align: center;
     }
-    .card_fotos img{
+
+    .card_fotos img {
         height: 100%;
         width: 80%;
     }
-    #doble{
-        margin:20px 0px;
+
+    #doble {
+        margin: 20px 0px;
     }
 
-    #doble img{
+    #doble img {
         height: 100%;
         width: 90%;
         margin-top: 5px;
     }
-    
+
     /*FIN SECTION*/
 
 }
 
-@media only screen and (min-width:1000px){
-    *{
+@media only screen and (min-width:1000px) {
+    * {
         margin: 0;
         padding: 0;
     }
+
     /*Fin Header*/
-    header{
+    header {
         height: 725px;
     }
-    .logo{
+
+    .logo {
         height: 100px;
     }
-    .head{
+
+    .head {
         background: url("../img/twice-alcohol-free-all-members-4k-wallpaper-3840x2160-uhdpaper.com-411.0_a.jpg") fixed;
         background-size: cover;
         height: 100%;
         width: 100%;
     }
 
-    .menu-btn{
+    .menu-btn {
         position: absolute;
         right: 20px;
         cursor: pointer;
         display: none;
     }
 
-    .menu ul{
+    .menu ul {
         position: relative;
         background: none;
         padding: 0;
         transform: translateX(0);
     }
-    
-    .menu ul{
+
+    .menu ul {
         font-size: 20px;
         list-style: none;
         list-style-type: none;
@@ -552,10 +589,10 @@ hr{
 
     .menu ul li {
         color: #fe97a4;
-        padding:5px ;
+        padding: 5px;
     }
-    
-    .menu ul li a{
+
+    .menu ul li a {
         text-decoration: none;
         font-size: 17px;
         padding: 0.5em;
@@ -563,38 +600,38 @@ hr{
         font-family: 'Playfair Display', serif;
     }
 
-    .menu ul li  :hover{
+    .menu ul li :hover {
         color: #fe97a4;
         border-radius: 15px;
         font-weight: bold;
         padding: 0 13px 0 13px;
     }
 
-    
 
 
-    
+
+
     /*Fin Header*/
-    
-    /*Inicio Section*/  
-    section{
+
+    /*Inicio Section*/
+    section {
         padding: 15px;
     }
-    .titulo{
-        
-    }
 
-    #titulo2{
+    .titulo {}
+
+    #titulo2 {
         margin-top: 25px;
     }
-    .carrusel_noticias{
 
+    .carrusel_noticias {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         width: 100%;
         height: 100%;
     }
-    .card_noticias{
+
+    .card_noticias {
         width: 30%;
         height: 100%;
         padding: 15px;
@@ -602,7 +639,8 @@ hr{
         border: 2px solid #fccfa6;
         border-radius: 5%;
     }
-    .card_noticias  img{
+
+    .card_noticias img {
         height: auto;
         width: 100%;
         padding-bottom: 5px;
@@ -610,53 +648,62 @@ hr{
 
     }
 
-    
-    .infoNews p{
+
+    .infoNews p {
         margin: 15px 0;
         font-size: .9em;
     }
 
-    #noticia3{
+    #noticia3 {
         margin-top: 0px;
     }
 
-    .carrusel_fotos{
+    .carrusel_fotos {
+        width: 100%;
         margin: 0.5%;
+        padding: 0 3% 0 3%;
         display: flex;
-        justify-content: space-around;
-    }
-    
-    .card_fotos{
-        width: 27%;
+        justify-content: space-between;
     }
 
-    .card_fotos img{
+    .card_fotos {
+        width: 30%;
+    }
+
+    .card_fotos img {
         height: 100%;
         width: 100%;
     }
 
-    #doble{
+    #doble {
         margin: 0px;
     }
-    #doble img{
+
+    #doble img {
         height: auto;
+        width: 98%;
     }
+
     /*FIN SECTION*/
 }
-.foot2{
+
+.foot2 {
     grid-area: foot2;
     border-left: 1px solid white;
 }
-.foot2 ul{
+
+.foot2 ul {
     list-style: none;
-    
+
 }
-.foot2 ul li{
+
+.foot2 ul li {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-.foot2 ul a{
+
+.foot2 ul a {
     text-decoration: none;
     color: white;
     padding: 10%;

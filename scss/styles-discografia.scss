@@ -4,8 +4,13 @@ $color2:#fdb3a5;
 $color3:#fe97a4;
 $color4:#fe7ba3;
 $color5:#ff5fa2;
-/*VARS COLORS*/
 
+/*VARS COLORS*/
+/*MIXINS*/
+@mixin tamano($width, $height) {
+    width: $width;
+    height: $height;
+}
 
 * {
     margin: 0px;
@@ -20,7 +25,7 @@ $color5:#ff5fa2;
         justify-content: space-between;
 
         .logo {
-            height: 100px;
+            @include tamano(auto, 100px);
         }
 
         .menu-btn {
@@ -44,12 +49,17 @@ $color5:#ff5fa2;
 
             li {
                 transition: 0.9s;
+
+                a {
+                    transition: 0.41s;
+                }
+
                 :hover {
                     color: #fe97a4;
                     border-radius: 15px;
                     font-weight: bold;
                     padding: 0 13px 0 13px;
-                    ;
+                    transition: 0.41s;
                 }
             }
 
@@ -84,13 +94,11 @@ main {
 }
 
 .titulo--2 {
-
     text-align: center;
     font-family: 'Playfair Display', italic;
     font-weight: bold;
-    font-size: 1, 5rem;
+    font-size: 1,5rem;
     color: $color4;
-
 }
 
 .discografia {
@@ -102,23 +110,19 @@ main {
 
 
     .discografia__caja {
-        height: auto;
-        width: 33%;
-
+        @include tamano(33%,auto);
         padding: 3%;
 
         .caja__info {
             color: $color2;
             text-align: center;
-
             font-family: 'Fredoka One', cursive;
             padding: 5% 0 1% 0;
         }
 
 
         .caja__disco {
-
-            width: 100%;
+            @include tamano(100%, auto);
             margin-top: 10px;
             border-radius: 5%;
             padding: 15px;
@@ -126,15 +130,15 @@ main {
             justify-content: space-evenly;
 
             .disco__img {
-                width: 60%;
+                @include tamano(60%, auto);
 
                 img {
-                    width: 100%;
+                    @include tamano(100%, auto);
                 }
             }
 
             .disco__iframe {
-                width: 40%;
+                @include tamano(40%, auto);
                 margin: 3%;
 
             }
@@ -143,18 +147,16 @@ main {
 }
 
 .footer {
-    padding: 1% 0 5%;
+    padding: 1% 0 1%;
     background-image: linear-gradient(to bottom, #fccfa6, #fdb3a5, #fe97a4, #fe7ba3, #ff5fa2);
     height: 100%;
     width: auto;
     display: grid;
-    grid-template-columns: 30% 40% 30%;
-    grid-template-rows: 50% 50%;
-    row-gap: 30px;
-    grid-template-areas: ". foot1 foot2"
-        ". info_footer foot2";
-    justify-content: start;
-    justify-items: center;
+    grid-template-columns: 20% 40% 20%;
+    grid-template-rows: 100%;
+    grid-template-areas: "info_footer foot1 foot2";
+    align-items: center;
+    justify-content: center;
 
 
     #logoPP {
@@ -165,26 +167,27 @@ main {
     .footer__caja {
         grid-area: foot1;
         text-align: center;
-        width: 100%;
+
+        a {
+            text-decoration: none;
+            color: #fccfa6;
+        }
 
         #logoPP {
-            width: 80px;
-            height: auto;
-
+            @include tamano(80px, auto);
         }
 
         img {
-            height: 100px;
+            @include tamano(auto, 100px);
         }
 
         .caja__icons {
-            padding: 10%;
-
+            padding: 2%;
 
             a {
                 text-align: center;
-                color: black;
                 transition: 0.6s;
+
 
                 i {
                     text-align: center;
@@ -196,67 +199,83 @@ main {
 
 
         }
-        a:hover{
- 
-                color: #ffffff;
-                padding: 15px;
-                transform: rotate(360deg);
-                transition: 0.6s;
- 
+
+        a:hover {
+
+            color: #ffffff;
+            padding: 15px;
+            transform: rotate(360deg);
+            transition: 0.6s;
+
         }
 
     }
 
     .info_footer {
         grid-area: info_footer;
-        text-align: center;
+        @include tamano(100%, auto);
 
-        a {
-            text-decoration: none;
-            color: #5d1dbd;
-        }
-
-        p {
+        h4 {
             color: #ffffff;
-            margin: 0;
-            font-size: .8em;
+            font-family: 'Playfair Display', italic;
+            font-weight: bold;
+            font-size: 1, 5rem;
         }
 
-        a :hover {
-            color: #000000;
+        #suscribirse {
+            width: 60%;
+            @include tamano(60%, auto);
+            border-radius: 5px;
+            padding: 2%;
+        }
+
+        #enviar {
+            padding: 3%;
+            @include tamano(10%, auto);
+            min-width: 90px;
+            background-color: $color1;
+            font-weight: 600;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            margin: 2%;
         }
     }
 
-    .foot2 {
-        grid-area: foot2;
-        border-left: 1px solid white;
+}
 
-        ul {
-            list-style: none;
+.foot2 {
+    grid-area: foot2;
+    border-left: 1px solid white;
+    margin: 4% 0 4% 0;
 
-            li {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
+    .foot__nav {
+        list-style: none;
 
-                a {
-                    text-decoration: none;
-                    color: white;
-                    padding: 10%;
 
-                }
+        li {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
 
-                :hover {
-                    color: #000000;
-                    border-radius: 15px;
-                    font-weight: bold;
-                    padding: 13px 0 13px 0;
-                    transition: 0.41s;
-                }
+            a {
+                text-decoration: none;
+                color: white;
+                font-family: 'Playfair Display', serif;
+                padding: 10%;
+                transition: 0.41s;
+
+            }
+
+            :hover {
+                color: #000000;
+                border-radius: 15px;
+                font-weight: bold;
+                padding: 13px 0 13px 0;
+                transition: 0.41s;
             }
         }
     }
-
 }
 
 /*FIN FOOTER*/
@@ -267,7 +286,7 @@ main {
         .head__menu {
 
             .logo {
-                height: 50px;
+                @include tamano(50px, auto);
             }
 
             .menu-btn {
@@ -281,7 +300,7 @@ main {
         .menu__nav {
 
             ul.menu__lista {
-                height: 100%;
+                @include tamano(auto, 100%);
                 display: block;
                 position: absolute;
                 top: 0;
@@ -321,8 +340,6 @@ main {
     }
 
     .discografia {
-
-        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -330,23 +347,19 @@ main {
 
 
         .discografia__caja {
-            height: auto;
-            width: 90%;
-
+            @include tamano(90%, auto);
             padding: 3%;
 
             .caja__info {
                 color: $color2;
                 text-align: center;
-
                 font-family: 'Fredoka One', cursive;
                 padding: 5% 0 1% 0;
             }
 
 
             .caja__disco {
-
-                width: 100%;
+                @include tamano(100%, auto);
                 margin-top: 10px;
                 border-radius: 5%;
                 padding: 15px;
@@ -356,15 +369,15 @@ main {
                 align-items: center;
 
                 .disco__img {
-                    width: 100%;
+                    @include tamano(100%, auto);
 
                     img {
-                        width: 100%;
+                        @include tamano(100%, auto);
                     }
                 }
 
                 .disco__iframe {
-                    width: 85%;
+                    @include tamano(85%, 190px);
                     height: 190px;
                     margin: 3% 0;
 
@@ -372,6 +385,141 @@ main {
             }
         }
     }
+
+    .footer {
+        padding: 1% 0 1%;
+        background-image: linear-gradient(to bottom, #fccfa6, #fdb3a5, #fe97a4, #fe7ba3, #ff5fa2);
+        @include tamano(auto, 100%);
+        display: grid;
+        grid-template-rows: repeat(3, 0.5fr);
+        grid-template-columns: 100%;
+        grid-template-areas: "foot1"
+            "foot2"
+            "info_footer";
+
+
+        .footer__caja {
+            grid-area: foot1;
+            @include tamano(100%, auto);
+            text-align: center;
+
+            a {
+                text-decoration: none;
+                color: white;
+            }
+
+            #logoPP {
+                @include tamano(80px, auto);
+
+            }
+
+            img {
+                @include tamano(auto, 100px);
+            }
+
+            .caja__icons {
+                padding: 2%;
+
+
+                a {
+                    text-align: center;
+                    color: black;
+                    transition: 0.6s;
+
+
+                    i {
+                        text-align: center;
+                        margin: 5px;
+                        @include tamano(20px, auto);
+
+                    }
+                }
+
+
+            }
+
+            a:hover {
+                color: #ffffff;
+                padding: 15px;
+                transform: rotate(360deg);
+                transition: 0.6s;
+            }
+
+        }
+
+        .info_footer {
+            grid-area: info_footer;
+            @include tamano(50%, auto);
+
+            h4 {
+                color: #ffffff;
+                font-family: 'Playfair Display', italic;
+                font-family: 'Playfair Display', italic;
+                font-weight: bold;
+                font-size: 1, 5rem;
+            }
+
+            #suscribirse {
+                @include tamano(80px, auto);
+                border-radius: 5px;
+                padding: 2%;
+            }
+
+            #enviar {
+                padding: 3%;
+                width: 10%;
+                min-width: 90px;
+                background-color: $color1;
+                font-weight: 600;
+                color: black;
+                border: none;
+                border-radius: 5px;
+                margin: 2%;
+            }
+        }
+
+
+    }
+
+    .foot2 {
+        grid-area: foot2;
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+        border-left: none;
+        display: block;
+
+        ul {
+            list-style: none;
+            padding: 0%;
+
+            li {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                a {
+                    text-decoration: none;
+                    color: white;
+                    padding: 10%;
+                    transition: 0.41s;
+
+                }
+
+                :hover {
+                    color: #000000;
+                    border-radius: 15px;
+                    font-weight: bold;
+                    padding: 13px 0 13px 0;
+                    transition: 0.41s;
+                }
+            }
+        }
+    }
+
+
+
+
+
 
 
 
@@ -383,7 +531,7 @@ main {
         .head__menu {
 
             .logo {
-                height: 70px;
+                @include tamano(70px, auto);
             }
 
             .menu__nav {
@@ -392,7 +540,7 @@ main {
                     font-size: 30px;
                     display: flex;
                     justify-content: flex-end;
-                    width: 60px;
+                    @include tamano(60px, auto);
 
                     li :hover {
                         color: #fe97a4;
@@ -416,53 +564,50 @@ main {
     }
 
     .discografia {
-        width: 100%;
+        @include tamano(100%, auto);
         display: flex;
         justify-content: center;
-
         flex-wrap: wrap;
 
 
         .discografia__caja {
-
-            width: 100%;
+            @include tamano(100%, auto);
             padding: 3% 0;
 
             .caja__info {
                 color: $color2;
                 text-align: center;
-
                 font-family: 'Fredoka One', cursive;
                 padding: 0 1% 0;
             }
 
 
             .caja__disco {
-                width: 100%;
+                @include tamano(100%, auto);
                 margin-top: 10px;
-                border-radius: 5%;
                 padding: 2%;
+                border-radius: 5%;
                 display: flex;
                 justify-content: space-evenly;
+                
 
 
                 .disco__img {
-                    width: 50%;
+                    @include tamano(50%, auto);
                     justify-self: center;
 
                     img {
-                        width: 100%;
+                        @include tamano(100%, auto);
 
                     }
                 }
 
                 .disco__iframe {
-
-                    width: 40%;
+                    @include tamano(40%, auto);
                     margin: 2%;
 
                     iframe {
-                        height: 100%;
+                        @include tamano(100%, 100%);
                     }
 
                 }
@@ -483,37 +628,32 @@ main {
     .head {
         .head__menu {
             .logo {
-                height: 70px;
+                @include tamano(auto, 70px);
             }
         }
     }
 
     .discografia {
-        width: 100%;
+        @include tamano(100%, auto);
         display: flex;
-        justify-content: center;
-        align-items: center;
         flex-wrap: wrap;
-
+        align-content: center;
 
         .discografia__caja {
-            height: auto;
-            width: 50%;
+            @include tamano(45%, auto);
 
-            padding: 3%;
+            padding: 2%;
 
             .caja__info {
                 color: $color2;
                 text-align: center;
-
                 font-family: 'Fredoka One', cursive;
                 padding: 5% 0 1% 0;
             }
 
 
             .caja__disco {
-
-                width: 100%;
+                @include tamano(100%, auto);
                 margin-top: 10px;
                 border-radius: 5%;
                 padding: 15px;
@@ -521,16 +661,15 @@ main {
                 justify-content: space-evenly;
 
                 .disco__img {
-                    width: 60%;
+                    @include tamano(60%, auto);
 
                     img {
-                        width: 100%;
+                        @include tamano(100%, auto);
                     }
                 }
 
                 .disco__iframe {
-
-                    width: 40%;
+                    @include tamano(40%, auto);
                     margin: 3%;
 
                 }

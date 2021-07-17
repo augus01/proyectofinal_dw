@@ -162,11 +162,14 @@ section {
             .infoMD {
                 align-self: center;
                 margin-left: 5%;
+                font-family: 'Kanit', sans-serif;
 
                 h4 {
                     text-align: center;
                     font-family: 'Fredoka One', cursive;
                 }
+
+                
             }
         }
 
@@ -187,7 +190,22 @@ section {
                     height: 320px;
 
                 }
+
+                .infoMI {
+                    text-align: justify;
+                    font-family: 'Kanit', sans-serif;
+
+                    h4 {
+                        text-align: center;
+                        font-family: 'Fredoka One', cursive;
+                    }
+
+                }
+
+
+
             }
+
 
         }
 
@@ -195,16 +213,6 @@ section {
 }
 
 
-
-.infoMI h4 {
-    text-align: center;
-    font-family: 'Fredoka One', cursive;
-}
-
-.infoMI {
-
-    text-align: justify;
-}
 
 /*FIN SECTION*/
 
@@ -294,7 +302,7 @@ section {
                 "foto"
             ;
             justify-items: center;
-            
+
 
             .foto {
                 grid-area: foto;
@@ -317,10 +325,12 @@ section {
                 justify-self: center;
                 text-align: center;
                 width: 85%;
-                h4{
+                font-family: 'Kanit', sans-serif;
+
+                h4 {
                     font-family: 'Fredoka One', cursive;
                 }
-    
+
             }
         }
 
@@ -334,6 +344,7 @@ section {
         display: none;
     }
 }
+
 /*RESPONSIVE TLFN*/
 
 
@@ -426,14 +437,14 @@ section {
                 align-self: center;
                 width: 80%;
                 font-size: 17px;
-
+                font-family: 'Kanit', sans-serif;
                 h4 {
                     text-align: center;
                     font-family: 'Fredoka One', cursive;
                 }
 
                 p {
-                    font-size: .7em;
+                    font-size: .8em;
                     text-align: justify;
                 }
             }
@@ -464,14 +475,14 @@ section {
                 align-self: center;
                 width: 90%;
                 font-size: 17px;
-
+                font-family: 'Kanit', sans-serif;
                 h4 {
                     text-align: center;
                     font-family: 'Fredoka One', cursive;
                 }
 
                 p {
-                    font-size: .7em;
+                    font-size: .8em;
                 }
             }
         }
@@ -612,20 +623,14 @@ section {
             .infoMD {
                 grid-area: infoMD;
                 align-self: center;
-                padding: 0;
-                margin: 0 0px 0px 0%;
                 width: 357px;
                 font-size: 17px;
+                font-family:'Kanit', sans-serif;
 
                 h4 {
                     text-align: center;
                     font-family: 'Fredoka One', cursive;
                 }
-                p{
-                    font-size: .8em;
-                }
-
-
             }
 
         }
@@ -654,7 +659,7 @@ section {
                 width: auto;
                 justify-self: center;
                 margin: 0px;
-
+    
                 img {
                     height: 500px;
                     width: auto;
@@ -666,26 +671,31 @@ section {
             .infoMI {
                 grid-area: infoMI;
                 align-self: center;
-                margin-right: 5%;
-                margin: 0 0px 0px 0%;
                 width: 357px;
                 font-size: 15px;
+                font-family: 'Kanit', sans-serif;
 
                 h4 {
                     text-align: center;
                     font-family: 'Fredoka One', cursive;
                 }
-                p{
-                    font-size: .9em;
+
+                p {
+                    font-size: .9rem;
+                    
                 }
+            }
+
+        
+
+
+            &:hover .fotoMI img {
+                transform: translate(20px, 15px);
+                transition: 0.8s;
             }
         }
 
-
-        .grillaMiembrosI:hover .fotoMI img {
-            transform: translate(20px, 15px);
-            transition: 0.8s;
-        }
+    
     }
 
     /*FIN SECTION*/
