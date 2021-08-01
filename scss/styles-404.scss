@@ -1,0 +1,58 @@
+body{
+    
+    .not-found{
+        background-image: linear-gradient(70deg, #fccfa6, #fdb3a5, #fe97a4, #fe7ba3, #ff5fa2);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        font-family: 'Playfair Display', serif;
+        color: white;
+        text-transform: uppercase;
+        padding: 0;
+        
+        &__texto{
+            font-size: 2.3em;
+            h2{
+                padding: 2% 5% 2% 5%;
+            }
+        }
+        
+        &__lovely{
+            img{
+                width: auto;
+            height: 100px;
+            }
+            
+        }
+    }
+}
+
+.verMas404{
+    font-family: 'IBM Plex Sans', serif;
+    margin: 50px 0 25px 0;
+
+    .verMas404__lista{
+        display: flex;
+        justify-content: center;
+        padding:0;
+    }
+    .verMas404__item{
+        padding-left:10px;
+        transition: 0.5s ease-in-out;
+        a{
+            color: rgb(235, 214, 214);
+            text-decoration: none;
+
+        }
+        &:hover{
+            color: #fccfa6;
+            padding: 0 15px;
+
+        }
+    }
+}
+
